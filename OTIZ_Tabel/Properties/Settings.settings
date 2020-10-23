@@ -1,0 +1,67 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OTIZ_Tabel.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppearCol" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="COMConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Srvr="stm07";Ref="v8-konstr-zup";</Value>
+    </Setting>
+    <Setting Name="LastDate" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">07/31/2020 23:59:00</Value>
+    </Setting>
+    <Setting Name="LastRow" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="FIOCol" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="FeastCol" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">9</Value>
+    </Setting>
+    <Setting Name="NightCol" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="FirstDate" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2020-07-01</Value>
+    </Setting>
+    <Setting Name="FirstRow" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="CodeCol" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="UserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">БакшееваТС</Value>
+    </Setting>
+    <Setting Name="UserPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="COMConnectionStringsCollection" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Srvr="stm07";Ref="v8-konstr-zup";&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="Preload" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="WEBLink" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://172.17.170.5/v8-konstr-zup/ws/Tabel.1cws</Value>
+    </Setting>
+    <Setting Name="WEBLinksCollection" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;http://172.17.170.5/v8-konstr-zuptest/ws/Tabel.1cws&lt;/string&gt;
+  &lt;string&gt;http://172.17.170.5/v8-konstr-zup/ws/Tabel.1cws&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="ConnectionTypeNum" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="OTIZ_Tabel_WebReference_Tabel" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.17.170.5/v8-konstr-zup/ws/Tabel.1cws</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

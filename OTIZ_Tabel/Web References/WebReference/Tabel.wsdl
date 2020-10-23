@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd1="http://172.17.170.5/Tabel" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:tns="http://172.17.170.5/Tabel" name="Tabel" targetNamespace="http://172.17.170.5/Tabel" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns:xs1="http://172.17.170.5/Tabel" elementFormDefault="qualified" targetNamespace="http://172.17.170.5/Tabel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="GetTabel">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Employee" type="xs:string" />
+            <xs:element name="DateBegin" type="xs:string" />
+            <xs:element name="DateEnd" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTabelResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="GetTabelRequestMessage">
+    <part name="parameters" element="tns:GetTabel" />
+  </message>
+  <message name="GetTabelResponseMessage">
+    <part name="parameters" element="tns:GetTabelResponse" />
+  </message>
+  <portType name="TabelPortType">
+    <operation name="GetTabel">
+      <input message="tns:GetTabelRequestMessage" />
+      <output message="tns:GetTabelResponseMessage" />
+    </operation>
+  </portType>
+  <binding name="TabelSoapBinding" type="tns:TabelPortType">
+    <soapbind:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetTabel">
+      <soapbind:operation soapAction="http://172.17.170.5/Tabel#Tabel:GetTabel" style="document" />
+      <input>
+        <soapbind:body use="literal" />
+      </input>
+      <output>
+        <soapbind:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="TabelSoap12Binding" type="tns:TabelPortType">
+    <soap12bind:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetTabel">
+      <soap12bind:operation soapAction="http://172.17.170.5/Tabel#Tabel:GetTabel" style="document" />
+      <input>
+        <soap12bind:body use="literal" />
+      </input>
+      <output>
+        <soap12bind:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Tabel">
+    <port name="TabelSoap" binding="tns:TabelSoapBinding">
+      <documentation>
+        <wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" conformsTo="http://ws-i.org/profiles/basic/1.1" />
+      </documentation>
+      <soapbind:address location="http://172.17.170.5/v8-konstr-zuptest/ws/Tabel.1cws" />
+    </port>
+    <port name="TabelSoap12" binding="tns:TabelSoap12Binding">
+      <soap12bind:address location="http://172.17.170.5/v8-konstr-zuptest/ws/Tabel.1cws" />
+    </port>
+  </service>
+</definitions>
