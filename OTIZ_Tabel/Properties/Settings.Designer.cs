@@ -12,7 +12,7 @@ namespace OTIZ_Tabel.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.6.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,9 +26,9 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("6")]
-        public int AppearCol {
+        public string AppearCol {
             get {
-                return ((int)(this["AppearCol"]));
+                return ((string)(this["AppearCol"]));
             }
             set {
                 this["AppearCol"] = value;
@@ -62,9 +62,9 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("100")]
-        public int LastRow {
+        public string LastRow {
             get {
-                return ((int)(this["LastRow"]));
+                return ((string)(this["LastRow"]));
             }
             set {
                 this["LastRow"] = value;
@@ -74,9 +74,9 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("3")]
-        public int FIOCol {
+        public string FIOCol {
             get {
-                return ((int)(this["FIOCol"]));
+                return ((string)(this["FIOCol"]));
             }
             set {
                 this["FIOCol"] = value;
@@ -86,9 +86,9 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("9")]
-        public int FeastCol {
+        public string FeastCol {
             get {
-                return ((int)(this["FeastCol"]));
+                return ((string)(this["FeastCol"]));
             }
             set {
                 this["FeastCol"] = value;
@@ -98,9 +98,9 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("20")]
-        public int NightCol {
+        public string NightCol {
             get {
-                return ((int)(this["NightCol"]));
+                return ((string)(this["NightCol"]));
             }
             set {
                 this["NightCol"] = value;
@@ -122,9 +122,9 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public int FirstRow {
+        public string FirstRow {
             get {
-                return ((int)(this["FirstRow"]));
+                return ((string)(this["FirstRow"]));
             }
             set {
                 this["FirstRow"] = value;
@@ -134,9 +134,9 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public int CodeCol {
+        public string CodeCol {
             get {
-                return ((int)(this["CodeCol"]));
+                return ((string)(this["CodeCol"]));
             }
             set {
                 this["CodeCol"] = value;
@@ -172,12 +172,12 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
             "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
             "tring>Srvr=\"stm07\";Ref=\"v8-konstr-zup\";</string>\r\n</ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection COMConnectionStringsCollection {
+        public global::System.Collections.Specialized.StringCollection ComConnectionStrings {
             get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["COMConnectionStringsCollection"]));
+                return ((global::System.Collections.Specialized.StringCollection)(this["ComConnectionStrings"]));
             }
             set {
-                this["COMConnectionStringsCollection"] = value;
+                this["ComConnectionStrings"] = value;
             }
         }
         
@@ -212,24 +212,24 @@ namespace OTIZ_Tabel.Properties {
   <string>http://172.17.170.5/v8-konstr-zuptest/ws/Tabel.1cws</string>
   <string>http://172.17.170.5/v8-konstr-zup/ws/Tabel.1cws</string>
 </ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection WEBLinksCollection {
+        public global::System.Collections.Specialized.StringCollection WebConnectionStrings {
             get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["WEBLinksCollection"]));
+                return ((global::System.Collections.Specialized.StringCollection)(this["WebConnectionStrings"]));
             }
             set {
-                this["WEBLinksCollection"] = value;
+                this["WebConnectionStrings"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int ConnectionTypeNum {
+        public string ConnectionType {
             get {
-                return ((int)(this["ConnectionTypeNum"]));
+                return ((string)(this["ConnectionType"]));
             }
             set {
-                this["ConnectionTypeNum"] = value;
+                this["ConnectionType"] = value;
             }
         }
         

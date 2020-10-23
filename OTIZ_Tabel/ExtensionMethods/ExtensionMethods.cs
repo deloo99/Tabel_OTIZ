@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Specialized;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace OTIZ_Tabel
@@ -39,5 +41,8 @@ namespace OTIZ_Tabel
                 ? date.ToString("yyyyMMdd")
                 : date.ToString("yyyyMMddHHmmss");
         }
+
+        //internal static void LoadStringCollection(this ListBox.ObjectCollection items, StringCollection strings)
+        //    => strings.Cast<string>()
     }
 }

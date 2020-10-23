@@ -7,6 +7,7 @@ namespace OTIZ_Tabel
     internal partial class MainRibbon
     {
         private readonly COMConnector1C _comEntity1C = new COMConnector1C();
+     //   private readonly WEBConnector1C_v2 _webEntity1C = new WEBConnector1C_v2();
         private readonly WEBConnector1C _webEntity1C = new WEBConnector1C();
         internal IConnector1C Entity1C;
 
@@ -69,7 +70,8 @@ namespace OTIZ_Tabel
             Entity1C = Settings.ConnectionType switch
             {
                 ConnectionType.WEBService => _webEntity1C,
-                _ => _comEntity1C,
+                ConnectionType.COMPort => _comEntity1C,
+                _ => throw new System.NotImplementedException(),
             };
         }
     }

@@ -43,14 +43,14 @@ namespace OTIZ_Tabel
             {
                 using var saveDialog = new SaveFileDialog
                 {
-                    FileName = "ОТИЗ Табель (" + DateTime.Now.ToString("dd.MM.yyyy hh.mm.ss") + ")",
+                    FileName = $"ОТИЗ Табель ({DateTime.Now:dd.MM.yyyy hh.mm.ss})",
                     Filter = "Текст RTF(*.rtf)|*.rtf",
                     DefaultExt = "rtf"
                 };
                 if (saveDialog.ShowDialog() == DialogResult.OK)
                 {
                     RTBoxLog.SaveFile(saveDialog.FileName, RichTextBoxStreamType.RichText);
-                    MessageBox.Show(this, $"Файл сохранен.", "Выполнено", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(this, "Файл сохранен.", "Выполнено", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)

@@ -32,42 +32,42 @@
             this.TWorkSetting = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.TBoxFeastCol = new System.Windows.Forms.TextBox();
+            this.FeastCol = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.TBoxNightCol = new System.Windows.Forms.TextBox();
+            this.NightCol = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.TBoxAppearCol = new System.Windows.Forms.TextBox();
-            this.DTimeLastDate = new System.Windows.Forms.DateTimePicker();
-            this.DTimeFirstDate = new System.Windows.Forms.DateTimePicker();
+            this.AppearCol = new System.Windows.Forms.TextBox();
+            this.LastDate = new System.Windows.Forms.DateTimePicker();
+            this.FirstDate = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.TBoxLastRow = new System.Windows.Forms.TextBox();
-            this.TBoxFirstRow = new System.Windows.Forms.TextBox();
-            this.TBoxFIOCol = new System.Windows.Forms.TextBox();
-            this.TBoxCodeCol = new System.Windows.Forms.TextBox();
+            this.LastRow = new System.Windows.Forms.TextBox();
+            this.FirstRow = new System.Windows.Forms.TextBox();
+            this.FIOCol = new System.Windows.Forms.TextBox();
+            this.CodeCol = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.TConnectSetting = new System.Windows.Forms.TabPage();
-            this.TCConnectionSettings = new System.Windows.Forms.TabControl();
-            this.TPCOMSetting = new System.Windows.Forms.TabPage();
+            this.SettingsTabControl = new System.Windows.Forms.TabControl();
+            this.ComSettingsTab = new System.Windows.Forms.TabPage();
             this.BTCOMRemoveConnectionString = new System.Windows.Forms.Button();
-            this.LBoxCOMConnectionStrings = new System.Windows.Forms.ListBox();
-            this.CBoxPreload = new System.Windows.Forms.CheckBox();
+            this.ComConnectionStrings = new System.Windows.Forms.ListBox();
+            this.Preload = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.TBoxCOMConnectionString = new System.Windows.Forms.TextBox();
+            this.ComConnectionString = new System.Windows.Forms.TextBox();
             this.BTCOMAddConnectionString = new System.Windows.Forms.Button();
-            this.TPWEBSetting = new System.Windows.Forms.TabPage();
+            this.WebSettingsTab = new System.Windows.Forms.TabPage();
             this.BTWEBRemoveLink = new System.Windows.Forms.Button();
-            this.LBoxWEBLinks = new System.Windows.Forms.ListBox();
+            this.WebConnectionStrings = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.TBoxWEBLink = new System.Windows.Forms.TextBox();
+            this.WebConnectionString = new System.Windows.Forms.TextBox();
             this.BTWEBAddLink = new System.Windows.Forms.Button();
-            this.TBoxUserPassword = new System.Windows.Forms.TextBox();
-            this.TBoxUserName = new System.Windows.Forms.TextBox();
+            this.UserPassword = new System.Windows.Forms.TextBox();
+            this.UserName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -80,9 +80,9 @@
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.TConnectSetting.SuspendLayout();
-            this.TCConnectionSettings.SuspendLayout();
-            this.TPCOMSetting.SuspendLayout();
-            this.TPWEBSetting.SuspendLayout();
+            this.SettingsTabControl.SuspendLayout();
+            this.ComSettingsTab.SuspendLayout();
+            this.WebSettingsTab.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,14 +102,14 @@
             this.TWorkSetting.Controls.Add(this.panel3);
             this.TWorkSetting.Controls.Add(this.panel4);
             this.TWorkSetting.Controls.Add(this.panel2);
-            this.TWorkSetting.Controls.Add(this.DTimeLastDate);
-            this.TWorkSetting.Controls.Add(this.DTimeFirstDate);
+            this.TWorkSetting.Controls.Add(this.LastDate);
+            this.TWorkSetting.Controls.Add(this.FirstDate);
             this.TWorkSetting.Controls.Add(this.label12);
             this.TWorkSetting.Controls.Add(this.label11);
-            this.TWorkSetting.Controls.Add(this.TBoxLastRow);
-            this.TWorkSetting.Controls.Add(this.TBoxFirstRow);
-            this.TWorkSetting.Controls.Add(this.TBoxFIOCol);
-            this.TWorkSetting.Controls.Add(this.TBoxCodeCol);
+            this.TWorkSetting.Controls.Add(this.LastRow);
+            this.TWorkSetting.Controls.Add(this.FirstRow);
+            this.TWorkSetting.Controls.Add(this.FIOCol);
+            this.TWorkSetting.Controls.Add(this.CodeCol);
             this.TWorkSetting.Controls.Add(this.label9);
             this.TWorkSetting.Controls.Add(this.label8);
             this.TWorkSetting.Controls.Add(this.label5);
@@ -126,7 +126,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(220)))), ((int)(((byte)(219)))));
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.TBoxFeastCol);
+            this.panel3.Controls.Add(this.FeastCol);
             this.panel3.Location = new System.Drawing.Point(8, 92);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(380, 26);
@@ -143,17 +143,17 @@
             // 
             // TBoxFeastCol
             // 
-            this.TBoxFeastCol.Location = new System.Drawing.Point(267, 3);
-            this.TBoxFeastCol.Name = "TBoxFeastCol";
-            this.TBoxFeastCol.Size = new System.Drawing.Size(100, 20);
-            this.TBoxFeastCol.TabIndex = 13;
-            this.TBoxFeastCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
+            this.FeastCol.Location = new System.Drawing.Point(267, 3);
+            this.FeastCol.Name = "TBoxFeastCol";
+            this.FeastCol.Size = new System.Drawing.Size(100, 20);
+            this.FeastCol.TabIndex = 13;
+            this.FeastCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(241)))));
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.TBoxNightCol);
+            this.panel4.Controls.Add(this.NightCol);
             this.panel4.Location = new System.Drawing.Point(8, 118);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(380, 26);
@@ -170,17 +170,17 @@
             // 
             // TBoxNightCol
             // 
-            this.TBoxNightCol.Location = new System.Drawing.Point(267, 3);
-            this.TBoxNightCol.Name = "TBoxNightCol";
-            this.TBoxNightCol.Size = new System.Drawing.Size(100, 20);
-            this.TBoxNightCol.TabIndex = 10;
-            this.TBoxNightCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
+            this.NightCol.Location = new System.Drawing.Point(267, 3);
+            this.NightCol.Name = "TBoxNightCol";
+            this.NightCol.Size = new System.Drawing.Size(100, 20);
+            this.NightCol.TabIndex = 10;
+            this.NightCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(233)))), ((int)(((byte)(217)))));
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.TBoxAppearCol);
+            this.panel2.Controls.Add(this.AppearCol);
             this.panel2.Location = new System.Drawing.Point(8, 66);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(380, 26);
@@ -197,31 +197,31 @@
             // 
             // TBoxAppearCol
             // 
-            this.TBoxAppearCol.Location = new System.Drawing.Point(267, 3);
-            this.TBoxAppearCol.Name = "TBoxAppearCol";
-            this.TBoxAppearCol.Size = new System.Drawing.Size(100, 20);
-            this.TBoxAppearCol.TabIndex = 9;
-            this.TBoxAppearCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
+            this.AppearCol.Location = new System.Drawing.Point(267, 3);
+            this.AppearCol.Name = "TBoxAppearCol";
+            this.AppearCol.Size = new System.Drawing.Size(100, 20);
+            this.AppearCol.TabIndex = 9;
+            this.AppearCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // DTimeLastDate
             // 
-            this.DTimeLastDate.Location = new System.Drawing.Point(249, 199);
-            this.DTimeLastDate.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.DTimeLastDate.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.DTimeLastDate.Name = "DTimeLastDate";
-            this.DTimeLastDate.Size = new System.Drawing.Size(126, 20);
-            this.DTimeLastDate.TabIndex = 17;
-            this.DTimeLastDate.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.LastDate.Location = new System.Drawing.Point(249, 199);
+            this.LastDate.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.LastDate.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.LastDate.Name = "DTimeLastDate";
+            this.LastDate.Size = new System.Drawing.Size(126, 20);
+            this.LastDate.TabIndex = 17;
+            this.LastDate.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
             // DTimeFirstDate
             // 
-            this.DTimeFirstDate.Location = new System.Drawing.Point(83, 199);
-            this.DTimeFirstDate.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.DTimeFirstDate.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.DTimeFirstDate.Name = "DTimeFirstDate";
-            this.DTimeFirstDate.Size = new System.Drawing.Size(126, 20);
-            this.DTimeFirstDate.TabIndex = 16;
-            this.DTimeFirstDate.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.FirstDate.Location = new System.Drawing.Point(83, 199);
+            this.FirstDate.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.FirstDate.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.FirstDate.Name = "DTimeFirstDate";
+            this.FirstDate.Size = new System.Drawing.Size(126, 20);
+            this.FirstDate.TabIndex = 16;
+            this.FirstDate.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
             // label12
             // 
@@ -243,35 +243,35 @@
             // 
             // TBoxLastRow
             // 
-            this.TBoxLastRow.Location = new System.Drawing.Point(275, 173);
-            this.TBoxLastRow.Name = "TBoxLastRow";
-            this.TBoxLastRow.Size = new System.Drawing.Size(100, 20);
-            this.TBoxLastRow.TabIndex = 12;
-            this.TBoxLastRow.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
+            this.LastRow.Location = new System.Drawing.Point(275, 173);
+            this.LastRow.Name = "TBoxLastRow";
+            this.LastRow.Size = new System.Drawing.Size(100, 20);
+            this.LastRow.TabIndex = 12;
+            this.LastRow.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // TBoxFirstRow
             // 
-            this.TBoxFirstRow.Location = new System.Drawing.Point(275, 147);
-            this.TBoxFirstRow.Name = "TBoxFirstRow";
-            this.TBoxFirstRow.Size = new System.Drawing.Size(100, 20);
-            this.TBoxFirstRow.TabIndex = 11;
-            this.TBoxFirstRow.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
+            this.FirstRow.Location = new System.Drawing.Point(275, 147);
+            this.FirstRow.Name = "TBoxFirstRow";
+            this.FirstRow.Size = new System.Drawing.Size(100, 20);
+            this.FirstRow.TabIndex = 11;
+            this.FirstRow.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // TBoxFIOCol
             // 
-            this.TBoxFIOCol.Location = new System.Drawing.Point(275, 43);
-            this.TBoxFIOCol.Name = "TBoxFIOCol";
-            this.TBoxFIOCol.Size = new System.Drawing.Size(100, 20);
-            this.TBoxFIOCol.TabIndex = 8;
-            this.TBoxFIOCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
+            this.FIOCol.Location = new System.Drawing.Point(275, 43);
+            this.FIOCol.Name = "TBoxFIOCol";
+            this.FIOCol.Size = new System.Drawing.Size(100, 20);
+            this.FIOCol.TabIndex = 8;
+            this.FIOCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // TBoxCodeCol
             // 
-            this.TBoxCodeCol.Location = new System.Drawing.Point(275, 17);
-            this.TBoxCodeCol.Name = "TBoxCodeCol";
-            this.TBoxCodeCol.Size = new System.Drawing.Size(100, 20);
-            this.TBoxCodeCol.TabIndex = 7;
-            this.TBoxCodeCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
+            this.CodeCol.Location = new System.Drawing.Point(275, 17);
+            this.CodeCol.Name = "TBoxCodeCol";
+            this.CodeCol.Size = new System.Drawing.Size(100, 20);
+            this.CodeCol.TabIndex = 7;
+            this.CodeCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // label9
             // 
@@ -311,9 +311,9 @@
             // 
             // TConnectSetting
             // 
-            this.TConnectSetting.Controls.Add(this.TCConnectionSettings);
-            this.TConnectSetting.Controls.Add(this.TBoxUserPassword);
-            this.TConnectSetting.Controls.Add(this.TBoxUserName);
+            this.TConnectSetting.Controls.Add(this.SettingsTabControl);
+            this.TConnectSetting.Controls.Add(this.UserPassword);
+            this.TConnectSetting.Controls.Add(this.UserName);
             this.TConnectSetting.Controls.Add(this.label3);
             this.TConnectSetting.Controls.Add(this.label2);
             this.TConnectSetting.Location = new System.Drawing.Point(4, 22);
@@ -324,32 +324,32 @@
             this.TConnectSetting.Text = "Настройки доступа 1С";
             this.TConnectSetting.UseVisualStyleBackColor = true;
             // 
-            // TCConnectionSettings
+            // ConnectionSettingsTabControl
             // 
-            this.TCConnectionSettings.Controls.Add(this.TPCOMSetting);
-            this.TCConnectionSettings.Controls.Add(this.TPWEBSetting);
-            this.TCConnectionSettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TCConnectionSettings.Location = new System.Drawing.Point(3, 3);
-            this.TCConnectionSettings.Name = "TCConnectionSettings";
-            this.TCConnectionSettings.SelectedIndex = 0;
-            this.TCConnectionSettings.Size = new System.Drawing.Size(390, 197);
-            this.TCConnectionSettings.TabIndex = 15;
+            this.SettingsTabControl.Controls.Add(this.WebSettingsTab);
+            this.SettingsTabControl.Controls.Add(this.ComSettingsTab);
+            this.SettingsTabControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SettingsTabControl.Location = new System.Drawing.Point(3, 3);
+            this.SettingsTabControl.Name = "ConnectionSettingsTabControl";
+            this.SettingsTabControl.SelectedIndex = 0;
+            this.SettingsTabControl.Size = new System.Drawing.Size(390, 197);
+            this.SettingsTabControl.TabIndex = 15;
             // 
             // TPCOMSetting
             // 
-            this.TPCOMSetting.Controls.Add(this.BTCOMRemoveConnectionString);
-            this.TPCOMSetting.Controls.Add(this.LBoxCOMConnectionStrings);
-            this.TPCOMSetting.Controls.Add(this.CBoxPreload);
-            this.TPCOMSetting.Controls.Add(this.label1);
-            this.TPCOMSetting.Controls.Add(this.TBoxCOMConnectionString);
-            this.TPCOMSetting.Controls.Add(this.BTCOMAddConnectionString);
-            this.TPCOMSetting.Location = new System.Drawing.Point(4, 22);
-            this.TPCOMSetting.Name = "TPCOMSetting";
-            this.TPCOMSetting.Padding = new System.Windows.Forms.Padding(3);
-            this.TPCOMSetting.Size = new System.Drawing.Size(382, 171);
-            this.TPCOMSetting.TabIndex = 0;
-            this.TPCOMSetting.Text = "COM порт";
-            this.TPCOMSetting.UseVisualStyleBackColor = true;
+            this.ComSettingsTab.Controls.Add(this.BTCOMRemoveConnectionString);
+            this.ComSettingsTab.Controls.Add(this.ComConnectionStrings);
+            this.ComSettingsTab.Controls.Add(this.Preload);
+            this.ComSettingsTab.Controls.Add(this.label1);
+            this.ComSettingsTab.Controls.Add(this.ComConnectionString);
+            this.ComSettingsTab.Controls.Add(this.BTCOMAddConnectionString);
+            this.ComSettingsTab.Location = new System.Drawing.Point(4, 22);
+            this.ComSettingsTab.Name = "TPCOMSetting";
+            this.ComSettingsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ComSettingsTab.Size = new System.Drawing.Size(382, 171);
+            this.ComSettingsTab.TabIndex = 0;
+            this.ComSettingsTab.Text = "COM порт";
+            this.ComSettingsTab.UseVisualStyleBackColor = true;
             // 
             // BTCOMRemoveConnectionString
             // 
@@ -364,22 +364,22 @@
             // 
             // LBoxCOMConnectionStrings
             // 
-            this.LBoxCOMConnectionStrings.FormattingEnabled = true;
-            this.LBoxCOMConnectionStrings.Location = new System.Drawing.Point(15, 24);
-            this.LBoxCOMConnectionStrings.Name = "LBoxCOMConnectionStrings";
-            this.LBoxCOMConnectionStrings.Size = new System.Drawing.Size(351, 95);
-            this.LBoxCOMConnectionStrings.TabIndex = 6;
-            this.LBoxCOMConnectionStrings.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LBoxCOMConnectionStrings_MouseDoubleClick);
+            this.ComConnectionStrings.FormattingEnabled = true;
+            this.ComConnectionStrings.Location = new System.Drawing.Point(15, 24);
+            this.ComConnectionStrings.Name = "LBoxCOMConnectionStrings";
+            this.ComConnectionStrings.Size = new System.Drawing.Size(351, 95);
+            this.ComConnectionStrings.TabIndex = 6;
+            this.ComConnectionStrings.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LBoxCOMConnectionStrings_MouseDoubleClick);
             // 
             // CBoxPreload
             // 
-            this.CBoxPreload.AutoSize = true;
-            this.CBoxPreload.Location = new System.Drawing.Point(15, 150);
-            this.CBoxPreload.Name = "CBoxPreload";
-            this.CBoxPreload.Size = new System.Drawing.Size(283, 17);
-            this.CBoxPreload.TabIndex = 10;
-            this.CBoxPreload.Text = "Использовать пред. загрузку списка сотрудников";
-            this.CBoxPreload.UseVisualStyleBackColor = true;
+            this.Preload.AutoSize = true;
+            this.Preload.Location = new System.Drawing.Point(15, 150);
+            this.Preload.Name = "CBoxPreload";
+            this.Preload.Size = new System.Drawing.Size(283, 17);
+            this.Preload.TabIndex = 10;
+            this.Preload.Text = "Использовать пред. загрузку списка сотрудников";
+            this.Preload.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -392,10 +392,10 @@
             // 
             // TBoxCOMConnectionString
             // 
-            this.TBoxCOMConnectionString.Location = new System.Drawing.Point(15, 124);
-            this.TBoxCOMConnectionString.Name = "TBoxCOMConnectionString";
-            this.TBoxCOMConnectionString.Size = new System.Drawing.Size(309, 20);
-            this.TBoxCOMConnectionString.TabIndex = 7;
+            this.ComConnectionString.Location = new System.Drawing.Point(15, 124);
+            this.ComConnectionString.Name = "TBoxCOMConnectionString";
+            this.ComConnectionString.Size = new System.Drawing.Size(309, 20);
+            this.ComConnectionString.TabIndex = 7;
             // 
             // BTCOMAddConnectionString
             // 
@@ -410,18 +410,18 @@
             // 
             // TPWEBSetting
             // 
-            this.TPWEBSetting.Controls.Add(this.BTWEBRemoveLink);
-            this.TPWEBSetting.Controls.Add(this.LBoxWEBLinks);
-            this.TPWEBSetting.Controls.Add(this.label13);
-            this.TPWEBSetting.Controls.Add(this.TBoxWEBLink);
-            this.TPWEBSetting.Controls.Add(this.BTWEBAddLink);
-            this.TPWEBSetting.Location = new System.Drawing.Point(4, 22);
-            this.TPWEBSetting.Name = "TPWEBSetting";
-            this.TPWEBSetting.Padding = new System.Windows.Forms.Padding(3);
-            this.TPWEBSetting.Size = new System.Drawing.Size(382, 171);
-            this.TPWEBSetting.TabIndex = 1;
-            this.TPWEBSetting.Text = "WEB сервис";
-            this.TPWEBSetting.UseVisualStyleBackColor = true;
+            this.WebSettingsTab.Controls.Add(this.BTWEBRemoveLink);
+            this.WebSettingsTab.Controls.Add(this.WebConnectionStrings);
+            this.WebSettingsTab.Controls.Add(this.label13);
+            this.WebSettingsTab.Controls.Add(this.WebConnectionString);
+            this.WebSettingsTab.Controls.Add(this.BTWEBAddLink);
+            this.WebSettingsTab.Location = new System.Drawing.Point(4, 22);
+            this.WebSettingsTab.Name = "TPWEBSetting";
+            this.WebSettingsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.WebSettingsTab.Size = new System.Drawing.Size(382, 171);
+            this.WebSettingsTab.TabIndex = 1;
+            this.WebSettingsTab.Text = "WEB сервис";
+            this.WebSettingsTab.UseVisualStyleBackColor = true;
             // 
             // BTWEBRemoveLink
             // 
@@ -436,12 +436,12 @@
             // 
             // LBoxWEBLinks
             // 
-            this.LBoxWEBLinks.FormattingEnabled = true;
-            this.LBoxWEBLinks.Location = new System.Drawing.Point(15, 24);
-            this.LBoxWEBLinks.Name = "LBoxWEBLinks";
-            this.LBoxWEBLinks.Size = new System.Drawing.Size(351, 95);
-            this.LBoxWEBLinks.TabIndex = 11;
-            this.LBoxWEBLinks.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LBoxWEBLinks_MouseDoubleClick);
+            this.WebConnectionStrings.FormattingEnabled = true;
+            this.WebConnectionStrings.Location = new System.Drawing.Point(15, 24);
+            this.WebConnectionStrings.Name = "LBoxWEBLinks";
+            this.WebConnectionStrings.Size = new System.Drawing.Size(351, 95);
+            this.WebConnectionStrings.TabIndex = 11;
+            this.WebConnectionStrings.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LBoxWEBLinks_MouseDoubleClick);
             // 
             // label13
             // 
@@ -454,10 +454,10 @@
             // 
             // TBoxWEBLink
             // 
-            this.TBoxWEBLink.Location = new System.Drawing.Point(15, 124);
-            this.TBoxWEBLink.Name = "TBoxWEBLink";
-            this.TBoxWEBLink.Size = new System.Drawing.Size(309, 20);
-            this.TBoxWEBLink.TabIndex = 12;
+            this.WebConnectionString.Location = new System.Drawing.Point(15, 124);
+            this.WebConnectionString.Name = "TBoxWEBLink";
+            this.WebConnectionString.Size = new System.Drawing.Size(309, 20);
+            this.WebConnectionString.TabIndex = 12;
             // 
             // BTWEBAddLink
             // 
@@ -472,19 +472,19 @@
             // 
             // TBoxUserPassword
             // 
-            this.TBoxUserPassword.Location = new System.Drawing.Point(131, 241);
-            this.TBoxUserPassword.Name = "TBoxUserPassword";
-            this.TBoxUserPassword.PasswordChar = '#';
-            this.TBoxUserPassword.Size = new System.Drawing.Size(242, 20);
-            this.TBoxUserPassword.TabIndex = 5;
-            this.TBoxUserPassword.WordWrap = false;
+            this.UserPassword.Location = new System.Drawing.Point(131, 241);
+            this.UserPassword.Name = "TBoxUserPassword";
+            this.UserPassword.PasswordChar = '#';
+            this.UserPassword.Size = new System.Drawing.Size(242, 20);
+            this.UserPassword.TabIndex = 5;
+            this.UserPassword.WordWrap = false;
             // 
             // TBoxUserName
             // 
-            this.TBoxUserName.Location = new System.Drawing.Point(131, 215);
-            this.TBoxUserName.Name = "TBoxUserName";
-            this.TBoxUserName.Size = new System.Drawing.Size(242, 20);
-            this.TBoxUserName.TabIndex = 4;
+            this.UserName.Location = new System.Drawing.Point(131, 215);
+            this.UserName.Name = "TBoxUserName";
+            this.UserName.Size = new System.Drawing.Size(242, 20);
+            this.UserName.TabIndex = 4;
             // 
             // label3
             // 
@@ -578,11 +578,11 @@
             this.panel2.PerformLayout();
             this.TConnectSetting.ResumeLayout(false);
             this.TConnectSetting.PerformLayout();
-            this.TCConnectionSettings.ResumeLayout(false);
-            this.TPCOMSetting.ResumeLayout(false);
-            this.TPCOMSetting.PerformLayout();
-            this.TPWEBSetting.ResumeLayout(false);
-            this.TPWEBSetting.PerformLayout();
+            this.SettingsTabControl.ResumeLayout(false);
+            this.ComSettingsTab.ResumeLayout(false);
+            this.ComSettingsTab.PerformLayout();
+            this.WebSettingsTab.ResumeLayout(false);
+            this.WebSettingsTab.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -592,17 +592,17 @@
 
         private System.Windows.Forms.TabControl TCSettings;
         private System.Windows.Forms.TabPage TWorkSetting;
-        private System.Windows.Forms.DateTimePicker DTimeLastDate;
-        private System.Windows.Forms.DateTimePicker DTimeFirstDate;
+        private System.Windows.Forms.DateTimePicker LastDate;
+        private System.Windows.Forms.DateTimePicker FirstDate;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox TBoxFeastCol;
-        private System.Windows.Forms.TextBox TBoxLastRow;
-        private System.Windows.Forms.TextBox TBoxFirstRow;
-        private System.Windows.Forms.TextBox TBoxNightCol;
-        private System.Windows.Forms.TextBox TBoxAppearCol;
-        private System.Windows.Forms.TextBox TBoxFIOCol;
-        private System.Windows.Forms.TextBox TBoxCodeCol;
+        private System.Windows.Forms.TextBox FeastCol;
+        private System.Windows.Forms.TextBox LastRow;
+        private System.Windows.Forms.TextBox FirstRow;
+        private System.Windows.Forms.TextBox NightCol;
+        private System.Windows.Forms.TextBox AppearCol;
+        private System.Windows.Forms.TextBox FIOCol;
+        private System.Windows.Forms.TextBox CodeCol;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -611,8 +611,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabPage TConnectSetting;
-        private System.Windows.Forms.TextBox TBoxUserPassword;
-        private System.Windows.Forms.TextBox TBoxUserName;
+        private System.Windows.Forms.TextBox UserPassword;
+        private System.Windows.Forms.TextBox UserName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -620,21 +620,21 @@
         private System.Windows.Forms.Button BTSave;
         private System.Windows.Forms.Button BTCancel;
         private System.Windows.Forms.Button BTTestConnection;
-        private System.Windows.Forms.TextBox TBoxCOMConnectionString;
-        private System.Windows.Forms.ListBox LBoxCOMConnectionStrings;
+        private System.Windows.Forms.TextBox ComConnectionString;
+        private System.Windows.Forms.ListBox ComConnectionStrings;
         private System.Windows.Forms.Button BTCOMRemoveConnectionString;
         private System.Windows.Forms.Button BTCOMAddConnectionString;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.CheckBox CBoxPreload;
-        private System.Windows.Forms.TabControl TCConnectionSettings;
-        private System.Windows.Forms.TabPage TPCOMSetting;
-        private System.Windows.Forms.TabPage TPWEBSetting;
-        private System.Windows.Forms.ListBox LBoxWEBLinks;
+        private System.Windows.Forms.CheckBox Preload;
+        private System.Windows.Forms.TabControl SettingsTabControl;
+        private System.Windows.Forms.TabPage ComSettingsTab;
+        private System.Windows.Forms.TabPage WebSettingsTab;
+        private System.Windows.Forms.ListBox WebConnectionStrings;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button BTWEBRemoveLink;
-        private System.Windows.Forms.TextBox TBoxWEBLink;
+        private System.Windows.Forms.TextBox WebConnectionString;
         private System.Windows.Forms.Button BTWEBAddLink;
     }
 }

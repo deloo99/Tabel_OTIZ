@@ -25,13 +25,13 @@ namespace OTIZ_Tabel
 
         internal static StringCollection COMConnectionStringsCollection
         {
-            get => _comConnectionStringsCollection ??= Properties.Settings.Default.COMConnectionStringsCollection;
-            set => _comConnectionStringsCollection = Properties.Settings.Default.COMConnectionStringsCollection = value;
+            get => _comConnectionStringsCollection ??= Properties.Settings.Default.ComConnectionStrings;
+            set => _comConnectionStringsCollection = Properties.Settings.Default.ComConnectionStrings = value;
         }
         internal static StringCollection WEBLinksCollection
         {
-            get => _webLinksCollection ??= Properties.Settings.Default.WEBLinksCollection;
-            set => _webLinksCollection = Properties.Settings.Default.WEBLinksCollection = value;
+            get => _webLinksCollection ??= Properties.Settings.Default.WebConnectionStrings;
+            set => _webLinksCollection = Properties.Settings.Default.WebConnectionStrings = value;
         }
         internal static string COMConnectionString
         {
@@ -105,8 +105,8 @@ namespace OTIZ_Tabel
         }
         internal static ConnectionType ConnectionType
         {
-            get => _onnectionType ??= Properties.Settings.Default.ConnectionTypeNum.ToConnectionType();
-            set => Properties.Settings.Default.ConnectionTypeNum = (int)(_onnectionType = value);
+            get => _onnectionType ??= Properties.Settings.Default.ConnectionType.ToConnectionType();
+            set => Properties.Settings.Default.ConnectionType = (int)(_onnectionType = value);
         }
 
         internal static void SaveChanges()
