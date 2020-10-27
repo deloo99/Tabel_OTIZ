@@ -8,12 +8,13 @@ using System.Text;
 
 namespace OTIZ_Tabel
 {
-    class WEBConnector1C : IConnector1C
+    class WEBConnector1C : IConnector
     {
+        private Properties.Settings _settings = Properties.Settings.Default;
         private Tabel _tabel;
 
         public ConnectionStatusType ConnectionStatus { get; private set; }
-        public void Connection(LoggerForm logger, ConnectData conDate)
+        public void Connection(LoggerForm logger)
         {
             ConnectionStatus = ConnectionStatusType.Progress;
             try
@@ -23,10 +24,10 @@ namespace OTIZ_Tabel
                 logger.LogText("Инициализация сервиса запросов...", Color.Black, FontStyle.Regular);
                 _tabel = new Tabel
                 {
-                    Url = conDate.WEBLink,
+                    Url = _settings.WebConnectionString,
                     SoapVersion = System.Web.Services.Protocols.SoapProtocolVersion.Soap12,
-                   Credentials = new NetworkCredential(Utf8ToWin1251(conDate.UserName), Utf8ToWin1251(conDate.UserPassword))
-                 //   Credentials = new NetworkCredential(Utf8ToWin1251(conDate.UserName), conDate.UserPassword)
+                    Credentials = new NetworkCredential(Utf8ToWin1251(_settings.UserName), Utf8ToWin1251(_settings.UserPassword))
+                    //   Credentials = new NetworkCredential(Utf8ToWin1251(conDate.UserName), conDate.UserPassword)
                 };
                 logger.LogText(" ✓ ВЫПОЛНЕНО\r\n", Color.Green, FontStyle.Bold);
 
@@ -55,6 +56,7 @@ namespace OTIZ_Tabel
         }
         public void SetWorkingHours(LoggerForm logger)
         {
+
             static string NormalizeCode(string source) => "-".PadLeft(5, '0') + source.PadLeft(5, '0');
             static string NormalizeCode2(string source) => "-".PadLeft(5, '0') + source.PadLeft(4, '0');
 
@@ -69,47 +71,47 @@ namespace OTIZ_Tabel
                 logger.LogText("Получение данных сотрудников...", Color.Black, FontStyle.Regular);
 
                 logger.LogText("\r\nПроставление часов:\r\n", Color.Black, FontStyle.Regular);
-                for (int row = Settings.FirstRow; row <= Settings.LastRow; row++)
+                for (int row = _settings.FirstRow; row <= _settings.LastRow; row++)
                 {
                     if (logger.IsClosed) return;
-                    string codeVal = Convert.ToString(worksheet.Cells[row, Settings.CodeCol].Value);
+                    string codeVal = Convert.ToString(worksheet.Cells[row, _settings.CodeCol].Value);
                     if (codeVal.IsInt())
                     {
                         codeVal = NormalizeCode(codeVal);
-                        var employe = ParseEmploye(_tabel.GetTabel(codeVal, Settings.FirstDate.To_1CDate(), Settings.LastDate.To_1CDate()));
+                        var employe = ParseEmploye(_tabel.GetTabel(codeVal, _settings.FirstDate.ToSolidDate(), _settings.LastDate.ToSolidDate()));
                         if (employe == null)
                         {
-                            codeVal = NormalizeCode2(Convert.ToString(worksheet.Cells[row, Settings.CodeCol].Value));
-                            employe = ParseEmploye(_tabel.GetTabel(codeVal, Settings.FirstDate.To_1CDate(), Settings.LastDate.To_1CDate()));
+                            codeVal = NormalizeCode2(Convert.ToString(worksheet.Cells[row, _settings.CodeCol].Value));
+                            employe = ParseEmploye(_tabel.GetTabel(codeVal, _settings.FirstDate.ToSolidDate(), _settings.LastDate.ToSolidDate()));
                         }
 
                         logger.LogText($"{row} стр.  [{codeVal}]", Color.Black, FontStyle.Regular);
                         if (employe != null)
                         {
-                            string name = Convert.ToString(worksheet.Cells[row, Settings.FIOCol].Value);
+                            string name = Convert.ToString(worksheet.Cells[row, _settings.FIOCol].Value);
                             if (employe.FIO.ToLower() == name.Trim().ToLower())
                             {
                                 logger.LogText($" {employe.FIO}", Color.Black, FontStyle.Regular);
-                                worksheet.Cells[row, Settings.AppearCol] = employe.Appear + employe.Night + employe.Feast;
-                                worksheet.Cells[row, Settings.NightCol] = employe.Night;
-                                worksheet.Cells[row, Settings.FeastCol] = employe.Feast;
+                                worksheet.Cells[row, _settings.AppearCol] = employe.Appear + employe.Night + employe.Feast;
+                                worksheet.Cells[row, _settings.NightCol] = employe.Night;
+                                worksheet.Cells[row, _settings.FeastCol] = employe.Feast;
                                 logger.LogText(" ✓ ВЫПОЛНЕНО\r\n", Color.Green, FontStyle.Bold);
                             }
                             else
                             {
                                 logger.LogText($" {employe.FIO} != {name}", Color.Black, FontStyle.Regular);
                                 logger.LogText($" ⚠ НЕСООТВЕТСТВИЕ ДАННЫХ\r\n", Color.Red, FontStyle.Bold);
-                                worksheet.Cells[row, Settings.AppearCol] = 0;
-                                worksheet.Cells[row, Settings.NightCol] = 0;
-                                worksheet.Cells[row, Settings.FeastCol] = 0;
+                                worksheet.Cells[row, _settings.AppearCol] = 0;
+                                worksheet.Cells[row, _settings.NightCol] = 0;
+                                worksheet.Cells[row, _settings.FeastCol] = 0;
                             }
                         }
                         else
                         {
                             logger.LogText($" ⚠ НЕТ ИНФОРМАЦИИ\r\n", Color.Red, FontStyle.Bold);
-                            worksheet.Cells[row, Settings.AppearCol] = 0;
-                            worksheet.Cells[row, Settings.NightCol] = 0;
-                            worksheet.Cells[row, Settings.FeastCol] = 0;
+                            worksheet.Cells[row, _settings.AppearCol] = 0;
+                            worksheet.Cells[row, _settings.NightCol] = 0;
+                            worksheet.Cells[row, _settings.FeastCol] = 0;
                         }
                     }
                     else
@@ -131,7 +133,7 @@ namespace OTIZ_Tabel
                 logger.Complete();
             }
         }
-        public void TestConnection(LoggerForm logger, ConnectData conDate)
+        public void TestConnection(LoggerForm logger)
         {
             try
             {
@@ -140,9 +142,9 @@ namespace OTIZ_Tabel
                 logger.LogText("Инициализация сервиса запросов...", Color.Black, FontStyle.Regular);
                 using Tabel tabel = new Tabel
                 {
-                    Url = conDate.WEBLink,
+                    Url = _settings.WebConnectionString,
                     SoapVersion = System.Web.Services.Protocols.SoapProtocolVersion.Soap12,
-                    Credentials = new NetworkCredential(Utf8ToWin1251(conDate.UserName), Utf8ToWin1251(conDate.UserPassword))
+                    Credentials = new NetworkCredential(Utf8ToWin1251(_settings.UserName), Utf8ToWin1251(_settings.UserPassword))
                 };
                 logger.LogText(" ✓ ВЫПОЛНЕНО\r\n", Color.Green, FontStyle.Bold);
 

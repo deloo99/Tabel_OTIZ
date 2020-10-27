@@ -26,9 +26,9 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("6")]
-        public string AppearCol {
+        public int AppearCol {
             get {
-                return ((string)(this["AppearCol"]));
+                return ((int)(this["AppearCol"]));
             }
             set {
                 this["AppearCol"] = value;
@@ -38,12 +38,12 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Srvr=\"stm07\";Ref=\"v8-konstr-zup\";")]
-        public string COMConnectionString {
+        public string ComConnectionString {
             get {
-                return ((string)(this["COMConnectionString"]));
+                return ((string)(this["ComConnectionString"]));
             }
             set {
-                this["COMConnectionString"] = value;
+                this["ComConnectionString"] = value;
             }
         }
         
@@ -62,9 +62,9 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("100")]
-        public string LastRow {
+        public int LastRow {
             get {
-                return ((string)(this["LastRow"]));
+                return ((int)(this["LastRow"]));
             }
             set {
                 this["LastRow"] = value;
@@ -74,9 +74,9 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("3")]
-        public string FIOCol {
+        public int FIOCol {
             get {
-                return ((string)(this["FIOCol"]));
+                return ((int)(this["FIOCol"]));
             }
             set {
                 this["FIOCol"] = value;
@@ -86,9 +86,9 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("9")]
-        public string FeastCol {
+        public int FeastCol {
             get {
-                return ((string)(this["FeastCol"]));
+                return ((int)(this["FeastCol"]));
             }
             set {
                 this["FeastCol"] = value;
@@ -98,9 +98,9 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("20")]
-        public string NightCol {
+        public int NightCol {
             get {
-                return ((string)(this["NightCol"]));
+                return ((int)(this["NightCol"]));
             }
             set {
                 this["NightCol"] = value;
@@ -122,9 +122,9 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public string FirstRow {
+        public int FirstRow {
             get {
-                return ((string)(this["FirstRow"]));
+                return ((int)(this["FirstRow"]));
             }
             set {
                 this["FirstRow"] = value;
@@ -134,9 +134,9 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public string CodeCol {
+        public int CodeCol {
             get {
-                return ((string)(this["CodeCol"]));
+                return ((int)(this["CodeCol"]));
             }
             set {
                 this["CodeCol"] = value;
@@ -196,12 +196,12 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("http://172.17.170.5/v8-konstr-zup/ws/Tabel.1cws")]
-        public string WEBLink {
+        public string WebConnectionString {
             get {
-                return ((string)(this["WEBLink"]));
+                return ((string)(this["WebConnectionString"]));
             }
             set {
-                this["WEBLink"] = value;
+                this["WebConnectionString"] = value;
             }
         }
         
@@ -224,9 +224,9 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public string ConnectionType {
+        public int ConnectionType {
             get {
-                return ((string)(this["ConnectionType"]));
+                return ((int)(this["ConnectionType"]));
             }
             set {
                 this["ConnectionType"] = value;

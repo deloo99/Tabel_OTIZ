@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TCSettings = new System.Windows.Forms.TabControl();
+            this.MainSettingTabs = new System.Windows.Forms.TabControl();
             this.TWorkSetting = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -52,50 +52,50 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.TConnectSetting = new System.Windows.Forms.TabPage();
-            this.SettingsTabControl = new System.Windows.Forms.TabControl();
-            this.ComSettingsTab = new System.Windows.Forms.TabPage();
-            this.BTCOMRemoveConnectionString = new System.Windows.Forms.Button();
+            this.ConnectionSettingsTabs = new System.Windows.Forms.TabControl();
+            this.WebSettingTab = new System.Windows.Forms.TabPage();
+            this.RemoveWebConnectionString = new System.Windows.Forms.Button();
+            this.WebConnectionStrings = new System.Windows.Forms.ListBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.WebConnectionString = new System.Windows.Forms.TextBox();
+            this.AddWebConnectionString = new System.Windows.Forms.Button();
+            this.ComSettingTab = new System.Windows.Forms.TabPage();
+            this.RemoveComConnectionString = new System.Windows.Forms.Button();
             this.ComConnectionStrings = new System.Windows.Forms.ListBox();
             this.Preload = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ComConnectionString = new System.Windows.Forms.TextBox();
-            this.BTCOMAddConnectionString = new System.Windows.Forms.Button();
-            this.WebSettingsTab = new System.Windows.Forms.TabPage();
-            this.BTWEBRemoveLink = new System.Windows.Forms.Button();
-            this.WebConnectionStrings = new System.Windows.Forms.ListBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.WebConnectionString = new System.Windows.Forms.TextBox();
-            this.BTWEBAddLink = new System.Windows.Forms.Button();
+            this.AddComConnectionString = new System.Windows.Forms.Button();
             this.UserPassword = new System.Windows.Forms.TextBox();
             this.UserName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BTSave = new System.Windows.Forms.Button();
-            this.BTCancel = new System.Windows.Forms.Button();
-            this.BTTestConnection = new System.Windows.Forms.Button();
-            this.TCSettings.SuspendLayout();
+            this.Save = new System.Windows.Forms.Button();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.TestConnection = new System.Windows.Forms.Button();
+            this.MainSettingTabs.SuspendLayout();
             this.TWorkSetting.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.TConnectSetting.SuspendLayout();
-            this.SettingsTabControl.SuspendLayout();
-            this.ComSettingsTab.SuspendLayout();
-            this.WebSettingsTab.SuspendLayout();
+            this.ConnectionSettingsTabs.SuspendLayout();
+            this.WebSettingTab.SuspendLayout();
+            this.ComSettingTab.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // TCSettings
+            // MainSettingTabs
             // 
-            this.TCSettings.Controls.Add(this.TWorkSetting);
-            this.TCSettings.Controls.Add(this.TConnectSetting);
-            this.TCSettings.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TCSettings.Location = new System.Drawing.Point(0, 0);
-            this.TCSettings.Name = "TCSettings";
-            this.TCSettings.SelectedIndex = 0;
-            this.TCSettings.Size = new System.Drawing.Size(404, 309);
-            this.TCSettings.TabIndex = 1;
+            this.MainSettingTabs.Controls.Add(this.TWorkSetting);
+            this.MainSettingTabs.Controls.Add(this.TConnectSetting);
+            this.MainSettingTabs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainSettingTabs.Location = new System.Drawing.Point(0, 0);
+            this.MainSettingTabs.Name = "MainSettingTabs";
+            this.MainSettingTabs.SelectedIndex = 0;
+            this.MainSettingTabs.Size = new System.Drawing.Size(404, 309);
+            this.MainSettingTabs.TabIndex = 1;
             // 
             // TWorkSetting
             // 
@@ -141,10 +141,10 @@
             this.label10.TabIndex = 6;
             this.label10.Text = "Колонка праздничных:";
             // 
-            // TBoxFeastCol
+            // FeastCol
             // 
             this.FeastCol.Location = new System.Drawing.Point(267, 3);
-            this.FeastCol.Name = "TBoxFeastCol";
+            this.FeastCol.Name = "FeastCol";
             this.FeastCol.Size = new System.Drawing.Size(100, 20);
             this.FeastCol.TabIndex = 13;
             this.FeastCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
@@ -168,10 +168,10 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "Колонка ночных часов:";
             // 
-            // TBoxNightCol
+            // NightCol
             // 
             this.NightCol.Location = new System.Drawing.Point(267, 3);
-            this.NightCol.Name = "TBoxNightCol";
+            this.NightCol.Name = "NightCol";
             this.NightCol.Size = new System.Drawing.Size(100, 20);
             this.NightCol.TabIndex = 10;
             this.NightCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
@@ -195,30 +195,30 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Колонка явок:";
             // 
-            // TBoxAppearCol
+            // AppearCol
             // 
             this.AppearCol.Location = new System.Drawing.Point(267, 3);
-            this.AppearCol.Name = "TBoxAppearCol";
+            this.AppearCol.Name = "AppearCol";
             this.AppearCol.Size = new System.Drawing.Size(100, 20);
             this.AppearCol.TabIndex = 9;
             this.AppearCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
-            // DTimeLastDate
+            // LastDate
             // 
             this.LastDate.Location = new System.Drawing.Point(249, 199);
             this.LastDate.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.LastDate.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.LastDate.Name = "DTimeLastDate";
+            this.LastDate.Name = "LastDate";
             this.LastDate.Size = new System.Drawing.Size(126, 20);
             this.LastDate.TabIndex = 17;
             this.LastDate.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
-            // DTimeFirstDate
+            // FirstDate
             // 
             this.FirstDate.Location = new System.Drawing.Point(83, 199);
             this.FirstDate.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.FirstDate.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.FirstDate.Name = "DTimeFirstDate";
+            this.FirstDate.Name = "FirstDate";
             this.FirstDate.Size = new System.Drawing.Size(126, 20);
             this.FirstDate.TabIndex = 16;
             this.FirstDate.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
@@ -241,34 +241,34 @@
             this.label11.TabIndex = 14;
             this.label11.Text = "Период с:";
             // 
-            // TBoxLastRow
+            // LastRow
             // 
             this.LastRow.Location = new System.Drawing.Point(275, 173);
-            this.LastRow.Name = "TBoxLastRow";
+            this.LastRow.Name = "LastRow";
             this.LastRow.Size = new System.Drawing.Size(100, 20);
             this.LastRow.TabIndex = 12;
             this.LastRow.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
-            // TBoxFirstRow
+            // FirstRow
             // 
             this.FirstRow.Location = new System.Drawing.Point(275, 147);
-            this.FirstRow.Name = "TBoxFirstRow";
+            this.FirstRow.Name = "FirstRow";
             this.FirstRow.Size = new System.Drawing.Size(100, 20);
             this.FirstRow.TabIndex = 11;
             this.FirstRow.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
-            // TBoxFIOCol
+            // FIOCol
             // 
             this.FIOCol.Location = new System.Drawing.Point(275, 43);
-            this.FIOCol.Name = "TBoxFIOCol";
+            this.FIOCol.Name = "FIOCol";
             this.FIOCol.Size = new System.Drawing.Size(100, 20);
             this.FIOCol.TabIndex = 8;
             this.FIOCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
-            // TBoxCodeCol
+            // CodeCol
             // 
             this.CodeCol.Location = new System.Drawing.Point(275, 17);
-            this.CodeCol.Name = "TBoxCodeCol";
+            this.CodeCol.Name = "CodeCol";
             this.CodeCol.Size = new System.Drawing.Size(100, 20);
             this.CodeCol.TabIndex = 7;
             this.CodeCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
@@ -311,7 +311,7 @@
             // 
             // TConnectSetting
             // 
-            this.TConnectSetting.Controls.Add(this.SettingsTabControl);
+            this.TConnectSetting.Controls.Add(this.ConnectionSettingsTabs);
             this.TConnectSetting.Controls.Add(this.UserPassword);
             this.TConnectSetting.Controls.Add(this.UserName);
             this.TConnectSetting.Controls.Add(this.label3);
@@ -324,58 +324,120 @@
             this.TConnectSetting.Text = "Настройки доступа 1С";
             this.TConnectSetting.UseVisualStyleBackColor = true;
             // 
-            // ConnectionSettingsTabControl
+            // ConnectionSettingsTabs
             // 
-            this.SettingsTabControl.Controls.Add(this.WebSettingsTab);
-            this.SettingsTabControl.Controls.Add(this.ComSettingsTab);
-            this.SettingsTabControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SettingsTabControl.Location = new System.Drawing.Point(3, 3);
-            this.SettingsTabControl.Name = "ConnectionSettingsTabControl";
-            this.SettingsTabControl.SelectedIndex = 0;
-            this.SettingsTabControl.Size = new System.Drawing.Size(390, 197);
-            this.SettingsTabControl.TabIndex = 15;
+            this.ConnectionSettingsTabs.Controls.Add(this.WebSettingTab);
+            this.ConnectionSettingsTabs.Controls.Add(this.ComSettingTab);
+            this.ConnectionSettingsTabs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ConnectionSettingsTabs.Location = new System.Drawing.Point(3, 3);
+            this.ConnectionSettingsTabs.Name = "ConnectionSettingsTabs";
+            this.ConnectionSettingsTabs.SelectedIndex = 0;
+            this.ConnectionSettingsTabs.Size = new System.Drawing.Size(390, 197);
+            this.ConnectionSettingsTabs.TabIndex = 15;
             // 
-            // TPCOMSetting
+            // WebSettingTab
             // 
-            this.ComSettingsTab.Controls.Add(this.BTCOMRemoveConnectionString);
-            this.ComSettingsTab.Controls.Add(this.ComConnectionStrings);
-            this.ComSettingsTab.Controls.Add(this.Preload);
-            this.ComSettingsTab.Controls.Add(this.label1);
-            this.ComSettingsTab.Controls.Add(this.ComConnectionString);
-            this.ComSettingsTab.Controls.Add(this.BTCOMAddConnectionString);
-            this.ComSettingsTab.Location = new System.Drawing.Point(4, 22);
-            this.ComSettingsTab.Name = "TPCOMSetting";
-            this.ComSettingsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ComSettingsTab.Size = new System.Drawing.Size(382, 171);
-            this.ComSettingsTab.TabIndex = 0;
-            this.ComSettingsTab.Text = "COM порт";
-            this.ComSettingsTab.UseVisualStyleBackColor = true;
+            this.WebSettingTab.Controls.Add(this.RemoveWebConnectionString);
+            this.WebSettingTab.Controls.Add(this.WebConnectionStrings);
+            this.WebSettingTab.Controls.Add(this.label13);
+            this.WebSettingTab.Controls.Add(this.WebConnectionString);
+            this.WebSettingTab.Controls.Add(this.AddWebConnectionString);
+            this.WebSettingTab.Location = new System.Drawing.Point(4, 22);
+            this.WebSettingTab.Name = "WebSettingTab";
+            this.WebSettingTab.Padding = new System.Windows.Forms.Padding(3);
+            this.WebSettingTab.Size = new System.Drawing.Size(382, 171);
+            this.WebSettingTab.TabIndex = 1;
+            this.WebSettingTab.Text = "WEB сервис";
+            this.WebSettingTab.UseVisualStyleBackColor = true;
             // 
-            // BTCOMRemoveConnectionString
+            // RemoveWebConnectionString
             // 
-            this.BTCOMRemoveConnectionString.Image = global::OTIZ_Tabel.Properties.Resources.delete_16p;
-            this.BTCOMRemoveConnectionString.Location = new System.Drawing.Point(329, 25);
-            this.BTCOMRemoveConnectionString.Name = "BTCOMRemoveConnectionString";
-            this.BTCOMRemoveConnectionString.Size = new System.Drawing.Size(36, 24);
-            this.BTCOMRemoveConnectionString.TabIndex = 9;
-            this.BTCOMRemoveConnectionString.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BTCOMRemoveConnectionString.UseVisualStyleBackColor = true;
-            this.BTCOMRemoveConnectionString.Click += new System.EventHandler(this.BTCOMRemoveConnectionString_Click);
+            this.RemoveWebConnectionString.Image = global::OTIZ_Tabel.Properties.Resources.delete_16p;
+            this.RemoveWebConnectionString.Location = new System.Drawing.Point(329, 25);
+            this.RemoveWebConnectionString.Name = "RemoveWebConnectionString";
+            this.RemoveWebConnectionString.Size = new System.Drawing.Size(36, 24);
+            this.RemoveWebConnectionString.TabIndex = 14;
+            this.RemoveWebConnectionString.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.RemoveWebConnectionString.UseVisualStyleBackColor = true;
+            this.RemoveWebConnectionString.Click += new System.EventHandler(this.RemoveWebConnectionString_Click);
             // 
-            // LBoxCOMConnectionStrings
+            // WebConnectionStrings
+            // 
+            this.WebConnectionStrings.FormattingEnabled = true;
+            this.WebConnectionStrings.Location = new System.Drawing.Point(15, 24);
+            this.WebConnectionStrings.Name = "WebConnectionStrings";
+            this.WebConnectionStrings.Size = new System.Drawing.Size(351, 95);
+            this.WebConnectionStrings.TabIndex = 11;
+            this.WebConnectionStrings.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.WebConnectionStrings_MouseDoubleClick);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(12, 7);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(284, 13);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "Выберите или введите ссылку на файл конфигурации:";
+            // 
+            // WebConnectionString
+            // 
+            this.WebConnectionString.Location = new System.Drawing.Point(15, 124);
+            this.WebConnectionString.Name = "WebConnectionString";
+            this.WebConnectionString.Size = new System.Drawing.Size(309, 20);
+            this.WebConnectionString.TabIndex = 12;
+            // 
+            // AddWebConnectionString
+            // 
+            this.AddWebConnectionString.Image = global::OTIZ_Tabel.Properties.Resources.left2top_p16;
+            this.AddWebConnectionString.Location = new System.Drawing.Point(329, 123);
+            this.AddWebConnectionString.Name = "AddWebConnectionString";
+            this.AddWebConnectionString.Size = new System.Drawing.Size(38, 22);
+            this.AddWebConnectionString.TabIndex = 13;
+            this.AddWebConnectionString.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AddWebConnectionString.UseVisualStyleBackColor = true;
+            this.AddWebConnectionString.Click += new System.EventHandler(this.AddWebConnectionString_Click);
+            // 
+            // ComSettingTab
+            // 
+            this.ComSettingTab.Controls.Add(this.RemoveComConnectionString);
+            this.ComSettingTab.Controls.Add(this.ComConnectionStrings);
+            this.ComSettingTab.Controls.Add(this.Preload);
+            this.ComSettingTab.Controls.Add(this.label1);
+            this.ComSettingTab.Controls.Add(this.ComConnectionString);
+            this.ComSettingTab.Controls.Add(this.AddComConnectionString);
+            this.ComSettingTab.Location = new System.Drawing.Point(4, 22);
+            this.ComSettingTab.Name = "ComSettingTab";
+            this.ComSettingTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ComSettingTab.Size = new System.Drawing.Size(382, 171);
+            this.ComSettingTab.TabIndex = 0;
+            this.ComSettingTab.Text = "COM порт";
+            this.ComSettingTab.UseVisualStyleBackColor = true;
+            // 
+            // RemoveComConnectionString
+            // 
+            this.RemoveComConnectionString.Image = global::OTIZ_Tabel.Properties.Resources.delete_16p;
+            this.RemoveComConnectionString.Location = new System.Drawing.Point(329, 25);
+            this.RemoveComConnectionString.Name = "RemoveComConnectionString";
+            this.RemoveComConnectionString.Size = new System.Drawing.Size(36, 24);
+            this.RemoveComConnectionString.TabIndex = 9;
+            this.RemoveComConnectionString.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.RemoveComConnectionString.UseVisualStyleBackColor = true;
+            this.RemoveComConnectionString.Click += new System.EventHandler(this.RemoveComConnectionString_Click);
+            // 
+            // ComConnectionStrings
             // 
             this.ComConnectionStrings.FormattingEnabled = true;
             this.ComConnectionStrings.Location = new System.Drawing.Point(15, 24);
-            this.ComConnectionStrings.Name = "LBoxCOMConnectionStrings";
+            this.ComConnectionStrings.Name = "ComConnectionStrings";
             this.ComConnectionStrings.Size = new System.Drawing.Size(351, 95);
             this.ComConnectionStrings.TabIndex = 6;
-            this.ComConnectionStrings.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LBoxCOMConnectionStrings_MouseDoubleClick);
+            this.ComConnectionStrings.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ComConnectionStrings_MouseDoubleClick);
             // 
-            // CBoxPreload
+            // Preload
             // 
             this.Preload.AutoSize = true;
             this.Preload.Location = new System.Drawing.Point(15, 150);
-            this.Preload.Name = "CBoxPreload";
+            this.Preload.Name = "Preload";
             this.Preload.Size = new System.Drawing.Size(283, 17);
             this.Preload.TabIndex = 10;
             this.Preload.Text = "Использовать пред. загрузку списка сотрудников";
@@ -390,99 +452,37 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Выберите или введите строку подключения к 1С:";
             // 
-            // TBoxCOMConnectionString
+            // ComConnectionString
             // 
             this.ComConnectionString.Location = new System.Drawing.Point(15, 124);
-            this.ComConnectionString.Name = "TBoxCOMConnectionString";
+            this.ComConnectionString.Name = "ComConnectionString";
             this.ComConnectionString.Size = new System.Drawing.Size(309, 20);
             this.ComConnectionString.TabIndex = 7;
             // 
-            // BTCOMAddConnectionString
+            // AddComConnectionString
             // 
-            this.BTCOMAddConnectionString.Image = global::OTIZ_Tabel.Properties.Resources.left2top_p16;
-            this.BTCOMAddConnectionString.Location = new System.Drawing.Point(329, 123);
-            this.BTCOMAddConnectionString.Name = "BTCOMAddConnectionString";
-            this.BTCOMAddConnectionString.Size = new System.Drawing.Size(38, 22);
-            this.BTCOMAddConnectionString.TabIndex = 8;
-            this.BTCOMAddConnectionString.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BTCOMAddConnectionString.UseVisualStyleBackColor = true;
-            this.BTCOMAddConnectionString.Click += new System.EventHandler(this.BTCOMAddConnectionString_Click);
+            this.AddComConnectionString.Image = global::OTIZ_Tabel.Properties.Resources.left2top_p16;
+            this.AddComConnectionString.Location = new System.Drawing.Point(329, 123);
+            this.AddComConnectionString.Name = "AddComConnectionString";
+            this.AddComConnectionString.Size = new System.Drawing.Size(38, 22);
+            this.AddComConnectionString.TabIndex = 8;
+            this.AddComConnectionString.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AddComConnectionString.UseVisualStyleBackColor = true;
+            this.AddComConnectionString.Click += new System.EventHandler(this.AddComConnectionString_Click);
             // 
-            // TPWEBSetting
-            // 
-            this.WebSettingsTab.Controls.Add(this.BTWEBRemoveLink);
-            this.WebSettingsTab.Controls.Add(this.WebConnectionStrings);
-            this.WebSettingsTab.Controls.Add(this.label13);
-            this.WebSettingsTab.Controls.Add(this.WebConnectionString);
-            this.WebSettingsTab.Controls.Add(this.BTWEBAddLink);
-            this.WebSettingsTab.Location = new System.Drawing.Point(4, 22);
-            this.WebSettingsTab.Name = "TPWEBSetting";
-            this.WebSettingsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.WebSettingsTab.Size = new System.Drawing.Size(382, 171);
-            this.WebSettingsTab.TabIndex = 1;
-            this.WebSettingsTab.Text = "WEB сервис";
-            this.WebSettingsTab.UseVisualStyleBackColor = true;
-            // 
-            // BTWEBRemoveLink
-            // 
-            this.BTWEBRemoveLink.Image = global::OTIZ_Tabel.Properties.Resources.delete_16p;
-            this.BTWEBRemoveLink.Location = new System.Drawing.Point(329, 25);
-            this.BTWEBRemoveLink.Name = "BTWEBRemoveLink";
-            this.BTWEBRemoveLink.Size = new System.Drawing.Size(36, 24);
-            this.BTWEBRemoveLink.TabIndex = 14;
-            this.BTWEBRemoveLink.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BTWEBRemoveLink.UseVisualStyleBackColor = true;
-            this.BTWEBRemoveLink.Click += new System.EventHandler(this.BTWEBRemoveLink_Click);
-            // 
-            // LBoxWEBLinks
-            // 
-            this.WebConnectionStrings.FormattingEnabled = true;
-            this.WebConnectionStrings.Location = new System.Drawing.Point(15, 24);
-            this.WebConnectionStrings.Name = "LBoxWEBLinks";
-            this.WebConnectionStrings.Size = new System.Drawing.Size(351, 95);
-            this.WebConnectionStrings.TabIndex = 11;
-            this.WebConnectionStrings.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LBoxWEBLinks_MouseDoubleClick);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(12, 7);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(284, 13);
-            this.label13.TabIndex = 10;
-            this.label13.Text = "Выберите или введите ссылку на файл конфигурации:";
-            // 
-            // TBoxWEBLink
-            // 
-            this.WebConnectionString.Location = new System.Drawing.Point(15, 124);
-            this.WebConnectionString.Name = "TBoxWEBLink";
-            this.WebConnectionString.Size = new System.Drawing.Size(309, 20);
-            this.WebConnectionString.TabIndex = 12;
-            // 
-            // BTWEBAddLink
-            // 
-            this.BTWEBAddLink.Image = global::OTIZ_Tabel.Properties.Resources.left2top_p16;
-            this.BTWEBAddLink.Location = new System.Drawing.Point(329, 123);
-            this.BTWEBAddLink.Name = "BTWEBAddLink";
-            this.BTWEBAddLink.Size = new System.Drawing.Size(38, 22);
-            this.BTWEBAddLink.TabIndex = 13;
-            this.BTWEBAddLink.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BTWEBAddLink.UseVisualStyleBackColor = true;
-            this.BTWEBAddLink.Click += new System.EventHandler(this.BTWEBAddLink_Click);
-            // 
-            // TBoxUserPassword
+            // UserPassword
             // 
             this.UserPassword.Location = new System.Drawing.Point(131, 241);
-            this.UserPassword.Name = "TBoxUserPassword";
+            this.UserPassword.Name = "UserPassword";
             this.UserPassword.PasswordChar = '#';
             this.UserPassword.Size = new System.Drawing.Size(242, 20);
             this.UserPassword.TabIndex = 5;
             this.UserPassword.WordWrap = false;
             // 
-            // TBoxUserName
+            // UserName
             // 
             this.UserName.Location = new System.Drawing.Point(131, 215);
-            this.UserName.Name = "TBoxUserName";
+            this.UserName.Name = "UserName";
             this.UserName.Size = new System.Drawing.Size(242, 20);
             this.UserName.TabIndex = 4;
             // 
@@ -506,59 +506,59 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.BTSave);
-            this.panel1.Controls.Add(this.BTCancel);
-            this.panel1.Controls.Add(this.BTTestConnection);
+            this.panel1.Controls.Add(this.Save);
+            this.panel1.Controls.Add(this.Cancel);
+            this.panel1.Controls.Add(this.TestConnection);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 309);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(404, 32);
             this.panel1.TabIndex = 2;
             // 
-            // BTSave
+            // Save
             // 
-            this.BTSave.Image = global::OTIZ_Tabel.Properties.Resources.save_16p;
-            this.BTSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTSave.Location = new System.Drawing.Point(198, 4);
-            this.BTSave.Name = "BTSave";
-            this.BTSave.Size = new System.Drawing.Size(100, 24);
-            this.BTSave.TabIndex = 2;
-            this.BTSave.Text = "Сохранить";
-            this.BTSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BTSave.UseVisualStyleBackColor = true;
-            this.BTSave.Click += new System.EventHandler(this.BTSave_Click);
+            this.Save.Image = global::OTIZ_Tabel.Properties.Resources.save_16p;
+            this.Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Save.Location = new System.Drawing.Point(198, 4);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(100, 24);
+            this.Save.TabIndex = 2;
+            this.Save.Text = "Сохранить";
+            this.Save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.BTSave_Click);
             // 
-            // BTCancel
+            // Cancel
             // 
-            this.BTCancel.Image = global::OTIZ_Tabel.Properties.Resources.cancel_16p;
-            this.BTCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTCancel.Location = new System.Drawing.Point(300, 4);
-            this.BTCancel.Name = "BTCancel";
-            this.BTCancel.Size = new System.Drawing.Size(100, 24);
-            this.BTCancel.TabIndex = 1;
-            this.BTCancel.Text = "Отменить";
-            this.BTCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BTCancel.UseVisualStyleBackColor = true;
-            this.BTCancel.Click += new System.EventHandler(this.BTCancel_Click);
+            this.Cancel.Image = global::OTIZ_Tabel.Properties.Resources.cancel_16p;
+            this.Cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Cancel.Location = new System.Drawing.Point(300, 4);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(100, 24);
+            this.Cancel.TabIndex = 1;
+            this.Cancel.Text = "Отменить";
+            this.Cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.BTCancel_Click);
             // 
-            // BTTestConnection
+            // TestConnection
             // 
-            this.BTTestConnection.Image = global::OTIZ_Tabel.Properties.Resources.refresh_16p;
-            this.BTTestConnection.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTTestConnection.Location = new System.Drawing.Point(4, 4);
-            this.BTTestConnection.Name = "BTTestConnection";
-            this.BTTestConnection.Size = new System.Drawing.Size(160, 24);
-            this.BTTestConnection.TabIndex = 0;
-            this.BTTestConnection.Text = "Тест соединения";
-            this.BTTestConnection.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BTTestConnection.UseVisualStyleBackColor = true;
-            this.BTTestConnection.Click += new System.EventHandler(this.BTTestConnection_Click);
+            this.TestConnection.Image = global::OTIZ_Tabel.Properties.Resources.refresh_16p;
+            this.TestConnection.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.TestConnection.Location = new System.Drawing.Point(4, 4);
+            this.TestConnection.Name = "TestConnection";
+            this.TestConnection.Size = new System.Drawing.Size(160, 24);
+            this.TestConnection.TabIndex = 0;
+            this.TestConnection.Text = "Тест соединения";
+            this.TestConnection.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.TestConnection.UseVisualStyleBackColor = true;
+            this.TestConnection.Click += new System.EventHandler(this.BTTestConnection_Click);
             // 
             // SettingsForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(404, 341);
-            this.Controls.Add(this.TCSettings);
+            this.Controls.Add(this.MainSettingTabs);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -567,7 +567,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Настройки приложения";
             this.Load += new System.EventHandler(this.SettingsForm_Load);
-            this.TCSettings.ResumeLayout(false);
+            this.MainSettingTabs.ResumeLayout(false);
             this.TWorkSetting.ResumeLayout(false);
             this.TWorkSetting.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -578,11 +578,11 @@
             this.panel2.PerformLayout();
             this.TConnectSetting.ResumeLayout(false);
             this.TConnectSetting.PerformLayout();
-            this.SettingsTabControl.ResumeLayout(false);
-            this.ComSettingsTab.ResumeLayout(false);
-            this.ComSettingsTab.PerformLayout();
-            this.WebSettingsTab.ResumeLayout(false);
-            this.WebSettingsTab.PerformLayout();
+            this.ConnectionSettingsTabs.ResumeLayout(false);
+            this.WebSettingTab.ResumeLayout(false);
+            this.WebSettingTab.PerformLayout();
+            this.ComSettingTab.ResumeLayout(false);
+            this.ComSettingTab.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -590,7 +590,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl TCSettings;
+        private System.Windows.Forms.TabControl MainSettingTabs;
         private System.Windows.Forms.TabPage TWorkSetting;
         private System.Windows.Forms.DateTimePicker LastDate;
         private System.Windows.Forms.DateTimePicker FirstDate;
@@ -617,24 +617,24 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button BTSave;
-        private System.Windows.Forms.Button BTCancel;
-        private System.Windows.Forms.Button BTTestConnection;
+        private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.Button TestConnection;
         private System.Windows.Forms.TextBox ComConnectionString;
         private System.Windows.Forms.ListBox ComConnectionStrings;
-        private System.Windows.Forms.Button BTCOMRemoveConnectionString;
-        private System.Windows.Forms.Button BTCOMAddConnectionString;
+        private System.Windows.Forms.Button RemoveComConnectionString;
+        private System.Windows.Forms.Button AddComConnectionString;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox Preload;
-        private System.Windows.Forms.TabControl SettingsTabControl;
-        private System.Windows.Forms.TabPage ComSettingsTab;
-        private System.Windows.Forms.TabPage WebSettingsTab;
+        private System.Windows.Forms.TabControl ConnectionSettingsTabs;
+        private System.Windows.Forms.TabPage ComSettingTab;
+        private System.Windows.Forms.TabPage WebSettingTab;
         private System.Windows.Forms.ListBox WebConnectionStrings;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button BTWEBRemoveLink;
+        private System.Windows.Forms.Button RemoveWebConnectionString;
         private System.Windows.Forms.TextBox WebConnectionString;
-        private System.Windows.Forms.Button BTWEBAddLink;
+        private System.Windows.Forms.Button AddWebConnectionString;
     }
 }

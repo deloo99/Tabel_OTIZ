@@ -186,10 +186,8 @@
   -->
   <ItemGroup>
     <Compile Include="Connectors\WEBConnector1C_v2.cs" />
-    <Compile Include="Data\ConnectData.cs" />
     <Compile Include="Connectors\COMConnector1C.cs" />
-    <Compile Include="Connectors\IConnector1C.cs" />
-    <Compile Include="Types\ConnectionType.cs" />
+    <Compile Include="Connectors\IConnector.cs" />
     <Compile Include="Types\ConnectionStatusType.cs" />
     <Compile Include="Data\Employe.cs" />
     <Compile Include="ExtensionMethods\ExtensionMethods.cs" />
@@ -245,7 +243,6 @@
     <Compile Include="MainRibbon.Designer.cs">
       <DependentUpon>MainRibbon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs" />
     <Compile Include="Forms\SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
