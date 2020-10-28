@@ -1,6 +1,6 @@
-﻿namespace OTIZ_Tabel
+﻿namespace OTIZ_Tabel.Types
 {
-    internal enum ConnectionStatusType
+    public enum ConnectionStatus
     {
         Disconnected,
         Progress,

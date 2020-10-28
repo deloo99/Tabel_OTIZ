@@ -26,12 +26,12 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("6")]
-        public int AppearCol {
+        public int NormalCol {
             get {
-                return ((int)(this["AppearCol"]));
+                return ((int)(this["NormalCol"]));
             }
             set {
-                this["AppearCol"] = value;
+                this["NormalCol"] = value;
             }
         }
         
@@ -86,12 +86,12 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("9")]
-        public int FeastCol {
+        public int HolidayCol {
             get {
-                return ((int)(this["FeastCol"]));
+                return ((int)(this["HolidayCol"]));
             }
             set {
-                this["FeastCol"] = value;
+                this["HolidayCol"] = value;
             }
         }
         

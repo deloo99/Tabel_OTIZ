@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace OTIZ_Tabel
 {
-    internal static class ExtensionMethods
+    internal static class ExtensionClass
     {
         internal static int ToInt(this string source)
            => int.TryParse(source, out int result) ? result : 0;

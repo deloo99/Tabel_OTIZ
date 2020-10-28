@@ -11,7 +11,7 @@
             : base(Globals.Factory.GetRibbonFactory())
         {
             InitializeComponent();
-            CheckEntity1C();
+            UpdateConnectionType();
         }
 
         /// <summary> 
@@ -37,9 +37,9 @@
         {
             this.tab1 = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
-            this.BTChangeConnection = this.Factory.CreateRibbonButton();
-            this.BTSetWorkingHours = this.Factory.CreateRibbonButton();
-            this.BTSettings = this.Factory.CreateRibbonButton();
+            this.ChangeConnectionState = this.Factory.CreateRibbonButton();
+            this.GetWorkedTime = this.Factory.CreateRibbonButton();
+            this.Settings = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.SuspendLayout();
@@ -53,38 +53,38 @@
             // 
             // group1
             // 
-            this.group1.Items.Add(this.BTChangeConnection);
-            this.group1.Items.Add(this.BTSetWorkingHours);
-            this.group1.Items.Add(this.BTSettings);
+            this.group1.Items.Add(this.ChangeConnectionState);
+            this.group1.Items.Add(this.GetWorkedTime);
+            this.group1.Items.Add(this.Settings);
             this.group1.Label = "ОТИЗ АО \"Стальмост\"";
             this.group1.Name = "group1";
             // 
-            // BTChangeConnection
+            // ChangeConnectionState
             // 
-            this.BTChangeConnection.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.BTChangeConnection.Image = global::OTIZ_Tabel.Properties.Resources.disconnect;
-            this.BTChangeConnection.Label = "Соединение с базой 1С";
-            this.BTChangeConnection.Name = "BTChangeConnection";
-            this.BTChangeConnection.ShowImage = true;
-            this.BTChangeConnection.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.BTChangeConnection_Click);
+            this.ChangeConnectionState.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.ChangeConnectionState.Image = global::OTIZ_Tabel.Properties.Resources.disconnect;
+            this.ChangeConnectionState.Label = "Соединение с базой 1С";
+            this.ChangeConnectionState.Name = "ChangeConnectionState";
+            this.ChangeConnectionState.ShowImage = true;
+            this.ChangeConnectionState.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ChangeConnectionState_Click);
             // 
-            // BTSetWorkingHours
+            // GetWorkedTime
             // 
-            this.BTSetWorkingHours.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.BTSetWorkingHours.Image = global::OTIZ_Tabel.Properties.Resources.time_list;
-            this.BTSetWorkingHours.Label = "Проставить часы";
-            this.BTSetWorkingHours.Name = "BTSetWorkingHours";
-            this.BTSetWorkingHours.ShowImage = true;
-            this.BTSetWorkingHours.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.BTSetWorkingHours_Click);
+            this.GetWorkedTime.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.GetWorkedTime.Image = global::OTIZ_Tabel.Properties.Resources.time_list;
+            this.GetWorkedTime.Label = "Проставить часы";
+            this.GetWorkedTime.Name = "GetWorkedTime";
+            this.GetWorkedTime.ShowImage = true;
+            this.GetWorkedTime.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.GetWorkedTime_Click);
             // 
-            // BTSettings
+            // Settings
             // 
-            this.BTSettings.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.BTSettings.Image = global::OTIZ_Tabel.Properties.Resources.settings;
-            this.BTSettings.Label = "Настроить приложение";
-            this.BTSettings.Name = "BTSettings";
-            this.BTSettings.ShowImage = true;
-            this.BTSettings.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.BTSettings_Click);
+            this.Settings.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.Settings.Image = global::OTIZ_Tabel.Properties.Resources.settings;
+            this.Settings.Label = "Настроить приложение";
+            this.Settings.Name = "Settings";
+            this.Settings.ShowImage = true;
+            this.Settings.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Settings_Click);
             // 
             // MainRibbon
             // 
@@ -103,9 +103,9 @@
 
         internal Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton BTSetWorkingHours;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton BTSettings;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton BTChangeConnection;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton GetWorkedTime;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton Settings;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton ChangeConnectionState;
     }
 
     partial class ThisRibbonCollection

@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace OTIZ_Tabel
 {
-    internal partial class SettingsForm : Form
+    public partial class SettingsForm : Form
     {
-        internal SettingsForm(bool hideConnectSetting = false)
+        public SettingsForm(bool hideConnectSetting = false)
         {
             InitializeComponent();
             if (hideConnectSetting)
@@ -34,15 +34,15 @@ namespace OTIZ_Tabel
             UserPassword.Text = _settings.UserPassword;
             CodeCol.Text = _settings.CodeCol.ToString();
             FIOCol.Text = _settings.FIOCol.ToString();
-            AppearCol.Text = _settings.AppearCol.ToString();
+            AppearCol.Text = _settings.NormalCol.ToString();
             NightCol.Text = _settings.NightCol.ToString();
-            FeastCol.Text = _settings.FeastCol.ToString();
+            FeastCol.Text = _settings.HolidayCol.ToString();
             FirstRow.Text = _settings.FirstRow.ToString();
             LastRow.Text = _settings.LastRow.ToString();
             FirstDate.Value = _settings.FirstDate;
             LastDate.Value = _settings.LastDate;
             Preload.Checked = _settings.Preload;
-            ConnectionSettingsTabs.TabIndex = _settings.ConnectionType;
+            ConnectionSettingsTabs.SelectedIndex = _settings.ConnectionType;
         }
         private void TextBox_TextChanged(object sender, EventArgs e)
         {
@@ -54,13 +54,16 @@ namespace OTIZ_Tabel
         private void BTTestConnection_Click(object sender, EventArgs e)
         {
             using var loggerForm = new LoggerForm();
-            IConnector connector = ConnectionSettingsTabs.SelectedIndex switch
+
+            switch (ConnectionSettingsTabs.SelectedIndex)
             {
-                0 => new WEBConnector1C(),
-                1 => new COMConnector1C(),
-                _ => throw new NotImplementedException("Тип подключения не реализован."),
-            };
-            new Task(delegate () { connector.TestConnection(loggerForm); }).Start();
+                case 0:
+                    new Task(delegate () { new WebConnector().TestConnection(loggerForm, WebConnectionString.Text, UserName.Text, UserPassword.Text); }).Start();
+                    break;
+                case 1:
+                    new Task(delegate () { new ComConnector().TestConnection(loggerForm, ComConnectionString.Text, UserName.Text, UserPassword.Text); }).Start();
+                    break;
+            }
             loggerForm.ShowDialog();
         }
         private void BTSave_Click(object sender, EventArgs e)
@@ -75,16 +78,16 @@ namespace OTIZ_Tabel
             _settings.ComConnectionStrings.Clear();
             _settings.ComConnectionStrings.AddRange(ComConnectionStrings.Items.Cast<string>().ToArray());
             _settings.WebConnectionStrings.Clear();
-            _settings.ComConnectionStrings.AddRange(WebConnectionStrings.Items.Cast<string>().ToArray());
+            _settings.WebConnectionStrings.AddRange(WebConnectionStrings.Items.Cast<string>().ToArray());
             _settings.ComConnectionString = ComConnectionString.Text;
             _settings.WebConnectionString = WebConnectionString.Text;
             _settings.UserName = UserName.Text;
             _settings.UserPassword = UserPassword.Text;
             _settings.CodeCol = CodeCol.Text.ToInt();
             _settings.FIOCol = FIOCol.Text.ToInt();
-            _settings.AppearCol = AppearCol.Text.ToInt();
+            _settings.NormalCol = AppearCol.Text.ToInt();
             _settings.NightCol = NightCol.Text.ToInt();
-            _settings.FeastCol = FeastCol.Text.ToInt();
+            _settings.HolidayCol = FeastCol.Text.ToInt();
             _settings.FirstRow = FirstRow.Text.ToInt();
             _settings.LastRow = LastRow.Text.ToInt();
             _settings.FirstDate = FirstDate.Value;

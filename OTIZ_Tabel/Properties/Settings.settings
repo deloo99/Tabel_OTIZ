@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OTIZ_Tabel.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="AppearCol" Type="System.Int32" Scope="User">
+    <Setting Name="NormalCol" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">6</Value>
     </Setting>
     <Setting Name="ComConnectionString" Type="System.String" Scope="User">
@@ -17,7 +17,7 @@
     <Setting Name="FIOCol" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">3</Value>
     </Setting>
-    <Setting Name="FeastCol" Type="System.Int32" Scope="User">
+    <Setting Name="HolidayCol" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">9</Value>
     </Setting>
     <Setting Name="NightCol" Type="System.Int32" Scope="User">

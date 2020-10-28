@@ -1,4 +1,6 @@
 ﻿using Microsoft.Office.Tools.Ribbon;
+using OTIZ_Tabel.Connectors;
+using OTIZ_Tabel.Types;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -6,73 +8,75 @@ namespace OTIZ_Tabel
 {
     internal partial class MainRibbon
     {
+        internal BaseConnector Connector { get; set; }
 
-        private readonly COMConnector1C _comEntity1C = new COMConnector1C();
-     //   private readonly WEBConnector1C_v2 _webEntity1C = new WEBConnector1C_v2();
-        private readonly WEBConnector1C _webEntity1C = new WEBConnector1C();
-        internal IConnector Entity1C;
-
-        private void BTSetWorkingHours_Click(object sender, RibbonControlEventArgs e)
+        private void GetWorkedTime_Click(object sender, RibbonControlEventArgs e)
         {
-            if (Entity1C.ConnectionStatus == ConnectionStatusType.Connected)
+            switch (Connector.ConnectionStatus)
             {
-                using var loggerForm = new LoggerForm();
-                new Task(delegate () { Entity1C.SetWorkingHours(loggerForm); }).Start();
-                loggerForm.ShowDialog();
-            }
-            else
-            {
-                BTChangeConnection_Click(sender, e);
-                //   MessageBox.Show(null, "Сначала установите соединения с базой 1С", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                case (ConnectionStatus.Connected):
+                    using (var loggerForm = new LoggerForm())
+                    {
+                        new Task(delegate () { Connector.SetWorkingHours(loggerForm); }).Start();
+                        loggerForm.ShowDialog();
+                    }
+                    break;
+                case (ConnectionStatus.Disconnected):
+                    ChangeConnectionState_Click(sender, e);
+                    break;
+                case (ConnectionStatus.Progress):
+                    MessageBox.Show(null, "В настоящий момент устанавливается соединение.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
             }
         }
-        private void BTSettings_Click(object sender, RibbonControlEventArgs e)
+        private void Settings_Click(object sender, RibbonControlEventArgs e)
         {
-            using var settingsForm = new SettingsForm(Entity1C.ConnectionStatus != ConnectionStatusType.Disconnected);
+            using var settingsForm = new SettingsForm(Connector.ConnectionStatus != ConnectionStatus.Disconnected);
             settingsForm.ShowDialog();
-            CheckEntity1C();
+            UpdateConnectionType();
         }
-        private void BTChangeConnection_Click(object sender, RibbonControlEventArgs e)
+        private void ChangeConnectionState_Click(object sender, RibbonControlEventArgs e)
         {
-            switch (Entity1C.ConnectionStatus)
+            switch (Connector.ConnectionStatus)
             {
-                case ConnectionStatusType.Disconnected:
+                case ConnectionStatus.Disconnected:
                     new Task(() =>
                     {
                         using (var loggerForm = new LoggerForm())
                         {
-                            Entity1C.Connection(loggerForm);
-                            CheckConnectionStatus(Entity1C.ConnectionStatus);
-                            loggerForm.ShowDialog();
+                            Connector.Connection();
+                            UpdateConnectionStatus(Connector.ConnectionStatus);
+                            if (Connector.ConnectorType != ConnectorType.WebConnector)
+                                loggerForm.ShowDialog();
                         };
                     }).Start();
-                    CheckConnectionStatus(ConnectionStatusType.Progress);
+                    UpdateConnectionStatus(ConnectionStatus.Progress);
                     return;
-                case ConnectionStatusType.Connected:
-                    if (MessageBox.Show("Вы уверены что хотите разорвать соединение с сервером 1С?", "Предупреждение",
+                case ConnectionStatus.Connected:
+                    if (MessageBox.Show("Отключиться от сервера 1С?", "Предупреждение",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                        Entity1C.Disonnection();
+                        Connector.Disonnection();
                     break;
             }
-            CheckConnectionStatus(Entity1C.ConnectionStatus);
+            UpdateConnectionStatus(Connector.ConnectionStatus);
         }
-        private void CheckConnectionStatus(ConnectionStatusType connectionStatus)
+        private void UpdateConnectionStatus(ConnectionStatus connectionStatus)
         {
-            BTChangeConnection.Image = connectionStatus switch
+            ChangeConnectionState.Image = connectionStatus switch
             {
-                ConnectionStatusType.Disconnected => Properties.Resources.disconnect,
-                ConnectionStatusType.Progress => Properties.Resources.exchange,
-                ConnectionStatusType.Connected => Properties.Resources.connect,
+                ConnectionStatus.Disconnected => Properties.Resources.disconnect,
+                ConnectionStatus.Progress => Properties.Resources.exchange,
+                ConnectionStatus.Connected => Properties.Resources.connect,
                 _ => null
             };
         }
-        private void CheckEntity1C()
+        private void UpdateConnectionType()
         {
-            Entity1C = Properties.Settings.Default.ConnectionType switch
+            Connector = Properties.Settings.Default.ConnectionType switch
             {
-                0 => _webEntity1C,
-                1 => _comEntity1C,
-                _ => throw new System.NotImplementedException(),
+                0 => new WebConnector(),
+                1 => new ComConnector(),
+                _ => throw new System.NotImplementedException("Неизвестный тип подключения"),
             };
         }
     }
