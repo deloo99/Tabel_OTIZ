@@ -85,7 +85,7 @@ namespace OTIZ_Tabel
                         logger.DefaultText($"{row} стр.  [{code}]");
                         if (employe != null)
                         {
-                            string name = Convert.ToString(worksheet.Cells[row, Settings.FIOCol].Value);
+                            string name = Convert.ToString(worksheet.Cells[row, Settings.FioCol].Value);
                             if (employe.FIO.ToLower() == name.Trim().ToLower())
                             {
                                 logger.DefaultText($" {employe.FIO}");

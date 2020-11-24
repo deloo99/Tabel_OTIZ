@@ -30,15 +30,22 @@
         {
             this.MainSettingTabs = new System.Windows.Forms.TabControl();
             this.TWorkSetting = new System.Windows.Forms.TabPage();
+            this.ShowLast = new System.Windows.Forms.CheckBox();
+            this.ShowFirst = new System.Windows.Forms.CheckBox();
+            this.ShowFIO = new System.Windows.Forms.CheckBox();
+            this.ShowCode = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.ShowHoliday = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.FeastCol = new System.Windows.Forms.TextBox();
+            this.HolidayCol = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.ShowNight = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.NightCol = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ShowNormal = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.AppearCol = new System.Windows.Forms.TextBox();
+            this.NormalCol = new System.Windows.Forms.TextBox();
             this.LastDate = new System.Windows.Forms.DateTimePicker();
             this.FirstDate = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
@@ -54,26 +61,72 @@
             this.TConnectSetting = new System.Windows.Forms.TabPage();
             this.ConnectionSettingsTabs = new System.Windows.Forms.TabControl();
             this.WebSettingTab = new System.Windows.Forms.TabPage();
-            this.RemoveWebConnectionString = new System.Windows.Forms.Button();
             this.WebConnectionStrings = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
             this.WebConnectionString = new System.Windows.Forms.TextBox();
-            this.AddWebConnectionString = new System.Windows.Forms.Button();
             this.ComSettingTab = new System.Windows.Forms.TabPage();
-            this.RemoveComConnectionString = new System.Windows.Forms.Button();
             this.ComConnectionStrings = new System.Windows.Forms.ListBox();
             this.Preload = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ComConnectionString = new System.Windows.Forms.TextBox();
-            this.AddComConnectionString = new System.Windows.Forms.Button();
             this.UserPassword = new System.Windows.Forms.TextBox();
             this.UserName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.TWeldedAssembliesSetting = new System.Windows.Forms.TabPage();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.WAExcelFileName = new System.Windows.Forms.TextBox();
+            this.WAMainDirectoryPath = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.WAGroup3 = new System.Windows.Forms.TextBox();
+            this.WAGroup2 = new System.Windows.Forms.TextBox();
+            this.WAGroup1 = new System.Windows.Forms.TextBox();
+            this.WAMark3 = new System.Windows.Forms.TextBox();
+            this.WAMark2 = new System.Windows.Forms.TextBox();
+            this.WAMark1 = new System.Windows.Forms.TextBox();
+            this.WAOrder3 = new System.Windows.Forms.TextBox();
+            this.WAOrder2 = new System.Windows.Forms.TextBox();
+            this.WAOrder1 = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.WANorma2 = new System.Windows.Forms.TextBox();
+            this.WANorma1 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.WANorma3 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.RemoveWebConnectionString = new System.Windows.Forms.Button();
+            this.AddWebConnectionString = new System.Windows.Forms.Button();
+            this.RemoveComConnectionString = new System.Windows.Forms.Button();
+            this.AddComConnectionString = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
             this.TestConnection = new System.Windows.Forms.Button();
+            this.TLaborIntensityOfProductsSetting = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.LIPExcelFileName = new System.Windows.Forms.TextBox();
+            this.LIPMainDirectoryPath = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.LIPMark2 = new System.Windows.Forms.TextBox();
+            this.LIPMark1 = new System.Windows.Forms.TextBox();
+            this.LIPOrder2 = new System.Windows.Forms.TextBox();
+            this.LIPOrder1 = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.LIPHoursRate1 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.LIPHoursRate2 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.LIPHoursRateWithoutWelds1 = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.LIPHoursRateWithoutWelds2 = new System.Windows.Forms.TextBox();
             this.MainSettingTabs.SuspendLayout();
             this.TWorkSetting.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -83,22 +136,34 @@
             this.ConnectionSettingsTabs.SuspendLayout();
             this.WebSettingTab.SuspendLayout();
             this.ComSettingTab.SuspendLayout();
+            this.TWeldedAssembliesSetting.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.TLaborIntensityOfProductsSetting.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainSettingTabs
             // 
             this.MainSettingTabs.Controls.Add(this.TWorkSetting);
             this.MainSettingTabs.Controls.Add(this.TConnectSetting);
+            this.MainSettingTabs.Controls.Add(this.TWeldedAssembliesSetting);
+            this.MainSettingTabs.Controls.Add(this.TLaborIntensityOfProductsSetting);
             this.MainSettingTabs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainSettingTabs.Location = new System.Drawing.Point(0, 0);
             this.MainSettingTabs.Name = "MainSettingTabs";
             this.MainSettingTabs.SelectedIndex = 0;
             this.MainSettingTabs.Size = new System.Drawing.Size(404, 309);
             this.MainSettingTabs.TabIndex = 1;
+            this.MainSettingTabs.SelectedIndexChanged += new System.EventHandler(this.MainSettingTabs_SelectedIndexChanged);
             // 
             // TWorkSetting
             // 
+            this.TWorkSetting.Controls.Add(this.ShowLast);
+            this.TWorkSetting.Controls.Add(this.ShowFirst);
+            this.TWorkSetting.Controls.Add(this.ShowFIO);
+            this.TWorkSetting.Controls.Add(this.ShowCode);
             this.TWorkSetting.Controls.Add(this.panel3);
             this.TWorkSetting.Controls.Add(this.panel4);
             this.TWorkSetting.Controls.Add(this.panel2);
@@ -119,18 +184,64 @@
             this.TWorkSetting.Padding = new System.Windows.Forms.Padding(3);
             this.TWorkSetting.Size = new System.Drawing.Size(396, 283);
             this.TWorkSetting.TabIndex = 0;
-            this.TWorkSetting.Text = "Настройки заполнения данных";
+            this.TWorkSetting.Text = "Заполнение часов";
             this.TWorkSetting.UseVisualStyleBackColor = true;
+            // 
+            // ShowLast
+            // 
+            this.ShowLast.AutoSize = true;
+            this.ShowLast.Location = new System.Drawing.Point(254, 176);
+            this.ShowLast.Name = "ShowLast";
+            this.ShowLast.Size = new System.Drawing.Size(15, 14);
+            this.ShowLast.TabIndex = 24;
+            this.ShowLast.UseVisualStyleBackColor = true;
+            // 
+            // ShowFirst
+            // 
+            this.ShowFirst.AutoSize = true;
+            this.ShowFirst.Location = new System.Drawing.Point(254, 150);
+            this.ShowFirst.Name = "ShowFirst";
+            this.ShowFirst.Size = new System.Drawing.Size(15, 14);
+            this.ShowFirst.TabIndex = 23;
+            this.ShowFirst.UseVisualStyleBackColor = true;
+            // 
+            // ShowFIO
+            // 
+            this.ShowFIO.AutoSize = true;
+            this.ShowFIO.Location = new System.Drawing.Point(254, 46);
+            this.ShowFIO.Name = "ShowFIO";
+            this.ShowFIO.Size = new System.Drawing.Size(15, 14);
+            this.ShowFIO.TabIndex = 22;
+            this.ShowFIO.UseVisualStyleBackColor = true;
+            // 
+            // ShowCode
+            // 
+            this.ShowCode.AutoSize = true;
+            this.ShowCode.Location = new System.Drawing.Point(254, 20);
+            this.ShowCode.Name = "ShowCode";
+            this.ShowCode.Size = new System.Drawing.Size(15, 14);
+            this.ShowCode.TabIndex = 21;
+            this.ShowCode.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(220)))), ((int)(((byte)(219)))));
+            this.panel3.Controls.Add(this.ShowHoliday);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.FeastCol);
+            this.panel3.Controls.Add(this.HolidayCol);
             this.panel3.Location = new System.Drawing.Point(8, 92);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(380, 26);
             this.panel3.TabIndex = 19;
+            // 
+            // ShowHoliday
+            // 
+            this.ShowHoliday.AutoSize = true;
+            this.ShowHoliday.Location = new System.Drawing.Point(246, 6);
+            this.ShowHoliday.Name = "ShowHoliday";
+            this.ShowHoliday.Size = new System.Drawing.Size(15, 14);
+            this.ShowHoliday.TabIndex = 22;
+            this.ShowHoliday.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -141,23 +252,33 @@
             this.label10.TabIndex = 6;
             this.label10.Text = "Колонка праздничных:";
             // 
-            // FeastCol
+            // HolidayCol
             // 
-            this.FeastCol.Location = new System.Drawing.Point(267, 3);
-            this.FeastCol.Name = "FeastCol";
-            this.FeastCol.Size = new System.Drawing.Size(100, 20);
-            this.FeastCol.TabIndex = 13;
-            this.FeastCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
+            this.HolidayCol.Location = new System.Drawing.Point(267, 3);
+            this.HolidayCol.Name = "HolidayCol";
+            this.HolidayCol.Size = new System.Drawing.Size(100, 20);
+            this.HolidayCol.TabIndex = 13;
+            this.HolidayCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(241)))));
+            this.panel4.Controls.Add(this.ShowNight);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.NightCol);
             this.panel4.Location = new System.Drawing.Point(8, 118);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(380, 26);
             this.panel4.TabIndex = 19;
+            // 
+            // ShowNight
+            // 
+            this.ShowNight.AutoSize = true;
+            this.ShowNight.Location = new System.Drawing.Point(246, 6);
+            this.ShowNight.Name = "ShowNight";
+            this.ShowNight.Size = new System.Drawing.Size(15, 14);
+            this.ShowNight.TabIndex = 22;
+            this.ShowNight.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -179,12 +300,22 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(233)))), ((int)(((byte)(217)))));
+            this.panel2.Controls.Add(this.ShowNormal);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.AppearCol);
+            this.panel2.Controls.Add(this.NormalCol);
             this.panel2.Location = new System.Drawing.Point(8, 66);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(380, 26);
             this.panel2.TabIndex = 18;
+            // 
+            // ShowNormal
+            // 
+            this.ShowNormal.AutoSize = true;
+            this.ShowNormal.Location = new System.Drawing.Point(246, 6);
+            this.ShowNormal.Name = "ShowNormal";
+            this.ShowNormal.Size = new System.Drawing.Size(15, 14);
+            this.ShowNormal.TabIndex = 23;
+            this.ShowNormal.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -195,13 +326,13 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Колонка явок:";
             // 
-            // AppearCol
+            // NormalCol
             // 
-            this.AppearCol.Location = new System.Drawing.Point(267, 3);
-            this.AppearCol.Name = "AppearCol";
-            this.AppearCol.Size = new System.Drawing.Size(100, 20);
-            this.AppearCol.TabIndex = 9;
-            this.AppearCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
+            this.NormalCol.Location = new System.Drawing.Point(267, 3);
+            this.NormalCol.Name = "NormalCol";
+            this.NormalCol.Size = new System.Drawing.Size(100, 20);
+            this.NormalCol.TabIndex = 9;
+            this.NormalCol.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // LastDate
             // 
@@ -321,7 +452,7 @@
             this.TConnectSetting.Padding = new System.Windows.Forms.Padding(3);
             this.TConnectSetting.Size = new System.Drawing.Size(396, 283);
             this.TConnectSetting.TabIndex = 1;
-            this.TConnectSetting.Text = "Настройки доступа 1С";
+            this.TConnectSetting.Text = "Настройки 1С";
             this.TConnectSetting.UseVisualStyleBackColor = true;
             // 
             // ConnectionSettingsTabs
@@ -350,17 +481,6 @@
             this.WebSettingTab.Text = "WEB сервис";
             this.WebSettingTab.UseVisualStyleBackColor = true;
             // 
-            // RemoveWebConnectionString
-            // 
-            this.RemoveWebConnectionString.Image = global::OTIZ_Tabel.Properties.Resources.delete_16p;
-            this.RemoveWebConnectionString.Location = new System.Drawing.Point(329, 25);
-            this.RemoveWebConnectionString.Name = "RemoveWebConnectionString";
-            this.RemoveWebConnectionString.Size = new System.Drawing.Size(36, 24);
-            this.RemoveWebConnectionString.TabIndex = 14;
-            this.RemoveWebConnectionString.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.RemoveWebConnectionString.UseVisualStyleBackColor = true;
-            this.RemoveWebConnectionString.Click += new System.EventHandler(this.RemoveWebConnectionString_Click);
-            // 
             // WebConnectionStrings
             // 
             this.WebConnectionStrings.FormattingEnabled = true;
@@ -386,17 +506,6 @@
             this.WebConnectionString.Size = new System.Drawing.Size(309, 20);
             this.WebConnectionString.TabIndex = 12;
             // 
-            // AddWebConnectionString
-            // 
-            this.AddWebConnectionString.Image = global::OTIZ_Tabel.Properties.Resources.left2top_p16;
-            this.AddWebConnectionString.Location = new System.Drawing.Point(329, 123);
-            this.AddWebConnectionString.Name = "AddWebConnectionString";
-            this.AddWebConnectionString.Size = new System.Drawing.Size(38, 22);
-            this.AddWebConnectionString.TabIndex = 13;
-            this.AddWebConnectionString.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.AddWebConnectionString.UseVisualStyleBackColor = true;
-            this.AddWebConnectionString.Click += new System.EventHandler(this.AddWebConnectionString_Click);
-            // 
             // ComSettingTab
             // 
             this.ComSettingTab.Controls.Add(this.RemoveComConnectionString);
@@ -412,17 +521,6 @@
             this.ComSettingTab.TabIndex = 0;
             this.ComSettingTab.Text = "COM порт";
             this.ComSettingTab.UseVisualStyleBackColor = true;
-            // 
-            // RemoveComConnectionString
-            // 
-            this.RemoveComConnectionString.Image = global::OTIZ_Tabel.Properties.Resources.delete_16p;
-            this.RemoveComConnectionString.Location = new System.Drawing.Point(329, 25);
-            this.RemoveComConnectionString.Name = "RemoveComConnectionString";
-            this.RemoveComConnectionString.Size = new System.Drawing.Size(36, 24);
-            this.RemoveComConnectionString.TabIndex = 9;
-            this.RemoveComConnectionString.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.RemoveComConnectionString.UseVisualStyleBackColor = true;
-            this.RemoveComConnectionString.Click += new System.EventHandler(this.RemoveComConnectionString_Click);
             // 
             // ComConnectionStrings
             // 
@@ -459,17 +557,6 @@
             this.ComConnectionString.Size = new System.Drawing.Size(309, 20);
             this.ComConnectionString.TabIndex = 7;
             // 
-            // AddComConnectionString
-            // 
-            this.AddComConnectionString.Image = global::OTIZ_Tabel.Properties.Resources.left2top_p16;
-            this.AddComConnectionString.Location = new System.Drawing.Point(329, 123);
-            this.AddComConnectionString.Name = "AddComConnectionString";
-            this.AddComConnectionString.Size = new System.Drawing.Size(38, 22);
-            this.AddComConnectionString.TabIndex = 8;
-            this.AddComConnectionString.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.AddComConnectionString.UseVisualStyleBackColor = true;
-            this.AddComConnectionString.Click += new System.EventHandler(this.AddComConnectionString_Click);
-            // 
             // UserPassword
             // 
             this.UserPassword.Location = new System.Drawing.Point(131, 241);
@@ -504,6 +591,228 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Имя пользователя:";
             // 
+            // TWeldedAssembliesSetting
+            // 
+            this.TWeldedAssembliesSetting.Controls.Add(this.label23);
+            this.TWeldedAssembliesSetting.Controls.Add(this.label22);
+            this.TWeldedAssembliesSetting.Controls.Add(this.WAExcelFileName);
+            this.TWeldedAssembliesSetting.Controls.Add(this.WAMainDirectoryPath);
+            this.TWeldedAssembliesSetting.Controls.Add(this.label21);
+            this.TWeldedAssembliesSetting.Controls.Add(this.label20);
+            this.TWeldedAssembliesSetting.Controls.Add(this.label18);
+            this.TWeldedAssembliesSetting.Controls.Add(this.WAGroup3);
+            this.TWeldedAssembliesSetting.Controls.Add(this.WAGroup2);
+            this.TWeldedAssembliesSetting.Controls.Add(this.WAGroup1);
+            this.TWeldedAssembliesSetting.Controls.Add(this.WAMark3);
+            this.TWeldedAssembliesSetting.Controls.Add(this.WAMark2);
+            this.TWeldedAssembliesSetting.Controls.Add(this.WAMark1);
+            this.TWeldedAssembliesSetting.Controls.Add(this.WAOrder3);
+            this.TWeldedAssembliesSetting.Controls.Add(this.WAOrder2);
+            this.TWeldedAssembliesSetting.Controls.Add(this.WAOrder1);
+            this.TWeldedAssembliesSetting.Controls.Add(this.panel5);
+            this.TWeldedAssembliesSetting.Controls.Add(this.label17);
+            this.TWeldedAssembliesSetting.Controls.Add(this.label16);
+            this.TWeldedAssembliesSetting.Controls.Add(this.label15);
+            this.TWeldedAssembliesSetting.Location = new System.Drawing.Point(4, 22);
+            this.TWeldedAssembliesSetting.Name = "TWeldedAssembliesSetting";
+            this.TWeldedAssembliesSetting.Size = new System.Drawing.Size(396, 283);
+            this.TWeldedAssembliesSetting.TabIndex = 2;
+            this.TWeldedAssembliesSetting.Text = "Сварные узлы";
+            this.TWeldedAssembliesSetting.UseVisualStyleBackColor = true;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(20, 186);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(124, 13);
+            this.label23.TabIndex = 38;
+            this.label23.Text = "Название Excel файла:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(20, 140);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(156, 13);
+            this.label22.TabIndex = 37;
+            this.label22.Text = "Путь к директории объектов:";
+            // 
+            // WAExcelFileName
+            // 
+            this.WAExcelFileName.Location = new System.Drawing.Point(147, 183);
+            this.WAExcelFileName.Name = "WAExcelFileName";
+            this.WAExcelFileName.Size = new System.Drawing.Size(228, 20);
+            this.WAExcelFileName.TabIndex = 36;
+            this.WAExcelFileName.Text = "Сводная таблица трудоемкости.xlsm";
+            // 
+            // WAMainDirectoryPath
+            // 
+            this.WAMainDirectoryPath.Location = new System.Drawing.Point(23, 158);
+            this.WAMainDirectoryPath.Name = "WAMainDirectoryPath";
+            this.WAMainDirectoryPath.Size = new System.Drawing.Size(352, 20);
+            this.WAMainDirectoryPath.TabIndex = 35;
+            this.WAMainDirectoryPath.Text = "P:\\\\КТО\\\\ОГТ\\\\Сводка трудоемкости по заказам";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(321, 10);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(41, 13);
+            this.label21.TabIndex = 34;
+            this.label21.Text = "Блок 3";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(243, 10);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(41, 13);
+            this.label20.TabIndex = 33;
+            this.label20.Text = "Блок 2";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(164, 10);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(41, 13);
+            this.label18.TabIndex = 32;
+            this.label18.Text = "Блок 1";
+            // 
+            // WAGroup3
+            // 
+            this.WAGroup3.Location = new System.Drawing.Point(303, 80);
+            this.WAGroup3.Name = "WAGroup3";
+            this.WAGroup3.Size = new System.Drawing.Size(72, 20);
+            this.WAGroup3.TabIndex = 31;
+            // 
+            // WAGroup2
+            // 
+            this.WAGroup2.Location = new System.Drawing.Point(225, 80);
+            this.WAGroup2.Name = "WAGroup2";
+            this.WAGroup2.Size = new System.Drawing.Size(72, 20);
+            this.WAGroup2.TabIndex = 30;
+            // 
+            // WAGroup1
+            // 
+            this.WAGroup1.Location = new System.Drawing.Point(147, 80);
+            this.WAGroup1.Name = "WAGroup1";
+            this.WAGroup1.Size = new System.Drawing.Size(72, 20);
+            this.WAGroup1.TabIndex = 29;
+            // 
+            // WAMark3
+            // 
+            this.WAMark3.Location = new System.Drawing.Point(303, 54);
+            this.WAMark3.Name = "WAMark3";
+            this.WAMark3.Size = new System.Drawing.Size(72, 20);
+            this.WAMark3.TabIndex = 28;
+            // 
+            // WAMark2
+            // 
+            this.WAMark2.Location = new System.Drawing.Point(225, 54);
+            this.WAMark2.Name = "WAMark2";
+            this.WAMark2.Size = new System.Drawing.Size(72, 20);
+            this.WAMark2.TabIndex = 27;
+            // 
+            // WAMark1
+            // 
+            this.WAMark1.Location = new System.Drawing.Point(147, 54);
+            this.WAMark1.Name = "WAMark1";
+            this.WAMark1.Size = new System.Drawing.Size(72, 20);
+            this.WAMark1.TabIndex = 26;
+            // 
+            // WAOrder3
+            // 
+            this.WAOrder3.Location = new System.Drawing.Point(303, 28);
+            this.WAOrder3.Name = "WAOrder3";
+            this.WAOrder3.Size = new System.Drawing.Size(72, 20);
+            this.WAOrder3.TabIndex = 25;
+            // 
+            // WAOrder2
+            // 
+            this.WAOrder2.Location = new System.Drawing.Point(225, 28);
+            this.WAOrder2.Name = "WAOrder2";
+            this.WAOrder2.Size = new System.Drawing.Size(72, 20);
+            this.WAOrder2.TabIndex = 24;
+            // 
+            // WAOrder1
+            // 
+            this.WAOrder1.Location = new System.Drawing.Point(147, 28);
+            this.WAOrder1.Name = "WAOrder1";
+            this.WAOrder1.Size = new System.Drawing.Size(72, 20);
+            this.WAOrder1.TabIndex = 23;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(233)))), ((int)(((byte)(217)))));
+            this.panel5.Controls.Add(this.WANorma2);
+            this.panel5.Controls.Add(this.WANorma1);
+            this.panel5.Controls.Add(this.label19);
+            this.panel5.Controls.Add(this.WANorma3);
+            this.panel5.Location = new System.Drawing.Point(8, 103);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(380, 26);
+            this.panel5.TabIndex = 19;
+            // 
+            // WANorma2
+            // 
+            this.WANorma2.Location = new System.Drawing.Point(217, 3);
+            this.WANorma2.Name = "WANorma2";
+            this.WANorma2.Size = new System.Drawing.Size(72, 20);
+            this.WANorma2.TabIndex = 11;
+            // 
+            // WANorma1
+            // 
+            this.WANorma1.Location = new System.Drawing.Point(139, 3);
+            this.WANorma1.Name = "WANorma1";
+            this.WANorma1.Size = new System.Drawing.Size(72, 20);
+            this.WANorma1.TabIndex = 10;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(12, 6);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(44, 13);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "Норма:";
+            // 
+            // WANorma3
+            // 
+            this.WANorma3.Location = new System.Drawing.Point(295, 3);
+            this.WANorma3.Name = "WANorma3";
+            this.WANorma3.Size = new System.Drawing.Size(72, 20);
+            this.WANorma3.TabIndex = 9;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(20, 83);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(45, 13);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Группа:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(20, 57);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(43, 13);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Марка:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(20, 31);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(41, 13);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Заказ:";
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.Save);
@@ -514,6 +823,50 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(404, 32);
             this.panel1.TabIndex = 2;
+            // 
+            // RemoveWebConnectionString
+            // 
+            this.RemoveWebConnectionString.Image = global::OTIZ_Tabel.Properties.Resources.delete_16p;
+            this.RemoveWebConnectionString.Location = new System.Drawing.Point(329, 25);
+            this.RemoveWebConnectionString.Name = "RemoveWebConnectionString";
+            this.RemoveWebConnectionString.Size = new System.Drawing.Size(36, 24);
+            this.RemoveWebConnectionString.TabIndex = 14;
+            this.RemoveWebConnectionString.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.RemoveWebConnectionString.UseVisualStyleBackColor = true;
+            this.RemoveWebConnectionString.Click += new System.EventHandler(this.RemoveWebConnectionString_Click);
+            // 
+            // AddWebConnectionString
+            // 
+            this.AddWebConnectionString.Image = global::OTIZ_Tabel.Properties.Resources.left2top_p16;
+            this.AddWebConnectionString.Location = new System.Drawing.Point(329, 123);
+            this.AddWebConnectionString.Name = "AddWebConnectionString";
+            this.AddWebConnectionString.Size = new System.Drawing.Size(38, 22);
+            this.AddWebConnectionString.TabIndex = 13;
+            this.AddWebConnectionString.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AddWebConnectionString.UseVisualStyleBackColor = true;
+            this.AddWebConnectionString.Click += new System.EventHandler(this.AddWebConnectionString_Click);
+            // 
+            // RemoveComConnectionString
+            // 
+            this.RemoveComConnectionString.Image = global::OTIZ_Tabel.Properties.Resources.delete_16p;
+            this.RemoveComConnectionString.Location = new System.Drawing.Point(329, 25);
+            this.RemoveComConnectionString.Name = "RemoveComConnectionString";
+            this.RemoveComConnectionString.Size = new System.Drawing.Size(36, 24);
+            this.RemoveComConnectionString.TabIndex = 9;
+            this.RemoveComConnectionString.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.RemoveComConnectionString.UseVisualStyleBackColor = true;
+            this.RemoveComConnectionString.Click += new System.EventHandler(this.RemoveComConnectionString_Click);
+            // 
+            // AddComConnectionString
+            // 
+            this.AddComConnectionString.Image = global::OTIZ_Tabel.Properties.Resources.left2top_p16;
+            this.AddComConnectionString.Location = new System.Drawing.Point(329, 123);
+            this.AddComConnectionString.Name = "AddComConnectionString";
+            this.AddComConnectionString.Size = new System.Drawing.Size(38, 22);
+            this.AddComConnectionString.TabIndex = 8;
+            this.AddComConnectionString.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AddComConnectionString.UseVisualStyleBackColor = true;
+            this.AddComConnectionString.Click += new System.EventHandler(this.AddComConnectionString_Click);
             // 
             // Save
             // 
@@ -526,7 +879,7 @@
             this.Save.Text = "Сохранить";
             this.Save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Save.UseVisualStyleBackColor = true;
-            this.Save.Click += new System.EventHandler(this.BTSave_Click);
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // Cancel
             // 
@@ -539,7 +892,7 @@
             this.Cancel.Text = "Отменить";
             this.Cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Cancel.UseVisualStyleBackColor = true;
-            this.Cancel.Click += new System.EventHandler(this.BTCancel_Click);
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // TestConnection
             // 
@@ -552,7 +905,196 @@
             this.TestConnection.Text = "Тест соединения";
             this.TestConnection.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.TestConnection.UseVisualStyleBackColor = true;
-            this.TestConnection.Click += new System.EventHandler(this.BTTestConnection_Click);
+            this.TestConnection.Click += new System.EventHandler(this.TestConnection_Click);
+            // 
+            // TLaborIntensityOfProductsSetting
+            // 
+            this.TLaborIntensityOfProductsSetting.Controls.Add(this.panel7);
+            this.TLaborIntensityOfProductsSetting.Controls.Add(this.label14);
+            this.TLaborIntensityOfProductsSetting.Controls.Add(this.label24);
+            this.TLaborIntensityOfProductsSetting.Controls.Add(this.LIPExcelFileName);
+            this.TLaborIntensityOfProductsSetting.Controls.Add(this.LIPMainDirectoryPath);
+            this.TLaborIntensityOfProductsSetting.Controls.Add(this.label25);
+            this.TLaborIntensityOfProductsSetting.Controls.Add(this.label26);
+            this.TLaborIntensityOfProductsSetting.Controls.Add(this.LIPMark2);
+            this.TLaborIntensityOfProductsSetting.Controls.Add(this.LIPMark1);
+            this.TLaborIntensityOfProductsSetting.Controls.Add(this.LIPOrder2);
+            this.TLaborIntensityOfProductsSetting.Controls.Add(this.LIPOrder1);
+            this.TLaborIntensityOfProductsSetting.Controls.Add(this.panel6);
+            this.TLaborIntensityOfProductsSetting.Controls.Add(this.label29);
+            this.TLaborIntensityOfProductsSetting.Controls.Add(this.label31);
+            this.TLaborIntensityOfProductsSetting.Location = new System.Drawing.Point(4, 22);
+            this.TLaborIntensityOfProductsSetting.Name = "TLaborIntensityOfProductsSetting";
+            this.TLaborIntensityOfProductsSetting.Size = new System.Drawing.Size(396, 283);
+            this.TLaborIntensityOfProductsSetting.TabIndex = 3;
+            this.TLaborIntensityOfProductsSetting.Text = "Трудоемкость изделий";
+            this.TLaborIntensityOfProductsSetting.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(20, 186);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(124, 13);
+            this.label14.TabIndex = 58;
+            this.label14.Text = "Название Excel файла:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(20, 140);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(156, 13);
+            this.label24.TabIndex = 57;
+            this.label24.Text = "Путь к директории объектов:";
+            // 
+            // LIPExcelFileName
+            // 
+            this.LIPExcelFileName.Location = new System.Drawing.Point(147, 183);
+            this.LIPExcelFileName.Name = "LIPExcelFileName";
+            this.LIPExcelFileName.Size = new System.Drawing.Size(228, 20);
+            this.LIPExcelFileName.TabIndex = 56;
+            this.LIPExcelFileName.Text = "Сводная таблица трудоемкости.xlsm";
+            // 
+            // LIPMainDirectoryPath
+            // 
+            this.LIPMainDirectoryPath.Location = new System.Drawing.Point(23, 158);
+            this.LIPMainDirectoryPath.Name = "LIPMainDirectoryPath";
+            this.LIPMainDirectoryPath.Size = new System.Drawing.Size(352, 20);
+            this.LIPMainDirectoryPath.TabIndex = 55;
+            this.LIPMainDirectoryPath.Text = "P:\\\\КТО\\\\ОГТ\\\\Сводка трудоемкости по заказам";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(321, 10);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(33, 13);
+            this.label25.TabIndex = 54;
+            this.label25.Text = "План";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(243, 10);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(35, 13);
+            this.label26.TabIndex = 53;
+            this.label26.Text = "Факт";
+            // 
+            // LIPMark2
+            // 
+            this.LIPMark2.Location = new System.Drawing.Point(303, 54);
+            this.LIPMark2.Name = "LIPMark2";
+            this.LIPMark2.Size = new System.Drawing.Size(72, 20);
+            this.LIPMark2.TabIndex = 51;
+            // 
+            // LIPMark1
+            // 
+            this.LIPMark1.Location = new System.Drawing.Point(225, 54);
+            this.LIPMark1.Name = "LIPMark1";
+            this.LIPMark1.Size = new System.Drawing.Size(72, 20);
+            this.LIPMark1.TabIndex = 50;
+            // 
+            // LIPOrder2
+            // 
+            this.LIPOrder2.Location = new System.Drawing.Point(303, 28);
+            this.LIPOrder2.Name = "LIPOrder2";
+            this.LIPOrder2.Size = new System.Drawing.Size(72, 20);
+            this.LIPOrder2.TabIndex = 45;
+            // 
+            // LIPOrder1
+            // 
+            this.LIPOrder1.Location = new System.Drawing.Point(225, 28);
+            this.LIPOrder1.Name = "LIPOrder1";
+            this.LIPOrder1.Size = new System.Drawing.Size(72, 20);
+            this.LIPOrder1.TabIndex = 44;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(233)))), ((int)(((byte)(217)))));
+            this.panel6.Controls.Add(this.LIPHoursRate1);
+            this.panel6.Controls.Add(this.label28);
+            this.panel6.Controls.Add(this.LIPHoursRate2);
+            this.panel6.Location = new System.Drawing.Point(8, 78);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(380, 26);
+            this.panel6.TabIndex = 42;
+            // 
+            // LIPHoursRate1
+            // 
+            this.LIPHoursRate1.Location = new System.Drawing.Point(217, 3);
+            this.LIPHoursRate1.Name = "LIPHoursRate1";
+            this.LIPHoursRate1.Size = new System.Drawing.Size(72, 20);
+            this.LIPHoursRate1.TabIndex = 11;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(12, 6);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(74, 13);
+            this.label28.TabIndex = 2;
+            this.label28.Text = "Норма/часы:";
+            // 
+            // LIPHoursRate2
+            // 
+            this.LIPHoursRate2.Location = new System.Drawing.Point(295, 3);
+            this.LIPHoursRate2.Name = "LIPHoursRate2";
+            this.LIPHoursRate2.Size = new System.Drawing.Size(72, 20);
+            this.LIPHoursRate2.TabIndex = 9;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(20, 57);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(43, 13);
+            this.label29.TabIndex = 41;
+            this.label29.Text = "Марка:";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(20, 31);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(41, 13);
+            this.label31.TabIndex = 39;
+            this.label31.Text = "Заказ:";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(233)))), ((int)(((byte)(217)))));
+            this.panel7.Controls.Add(this.LIPHoursRateWithoutWelds1);
+            this.panel7.Controls.Add(this.label32);
+            this.panel7.Controls.Add(this.LIPHoursRateWithoutWelds2);
+            this.panel7.Location = new System.Drawing.Point(8, 103);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(380, 26);
+            this.panel7.TabIndex = 59;
+            // 
+            // LIPHoursRateWithoutWelds1
+            // 
+            this.LIPHoursRateWithoutWelds1.Location = new System.Drawing.Point(217, 3);
+            this.LIPHoursRateWithoutWelds1.Name = "LIPHoursRateWithoutWelds1";
+            this.LIPHoursRateWithoutWelds1.Size = new System.Drawing.Size(72, 20);
+            this.LIPHoursRateWithoutWelds1.TabIndex = 11;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(12, 6);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(158, 13);
+            this.label32.TabIndex = 2;
+            this.label32.Text = "Норма/часы (без сварочных):";
+            // 
+            // LIPHoursRateWithoutWelds2
+            // 
+            this.LIPHoursRateWithoutWelds2.Location = new System.Drawing.Point(295, 3);
+            this.LIPHoursRateWithoutWelds2.Name = "LIPHoursRateWithoutWelds2";
+            this.LIPHoursRateWithoutWelds2.Size = new System.Drawing.Size(72, 20);
+            this.LIPHoursRateWithoutWelds2.TabIndex = 9;
             // 
             // SettingsForm
             // 
@@ -583,7 +1125,17 @@
             this.WebSettingTab.PerformLayout();
             this.ComSettingTab.ResumeLayout(false);
             this.ComSettingTab.PerformLayout();
+            this.TWeldedAssembliesSetting.ResumeLayout(false);
+            this.TWeldedAssembliesSetting.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.TLaborIntensityOfProductsSetting.ResumeLayout(false);
+            this.TLaborIntensityOfProductsSetting.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -596,11 +1148,11 @@
         private System.Windows.Forms.DateTimePicker FirstDate;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox FeastCol;
+        private System.Windows.Forms.TextBox HolidayCol;
         private System.Windows.Forms.TextBox LastRow;
         private System.Windows.Forms.TextBox FirstRow;
         private System.Windows.Forms.TextBox NightCol;
-        private System.Windows.Forms.TextBox AppearCol;
+        private System.Windows.Forms.TextBox NormalCol;
         private System.Windows.Forms.TextBox FIOCol;
         private System.Windows.Forms.TextBox CodeCol;
         private System.Windows.Forms.Label label10;
@@ -636,5 +1188,58 @@
         private System.Windows.Forms.Button RemoveWebConnectionString;
         private System.Windows.Forms.TextBox WebConnectionString;
         private System.Windows.Forms.Button AddWebConnectionString;
+        private System.Windows.Forms.CheckBox ShowLast;
+        private System.Windows.Forms.CheckBox ShowFirst;
+        private System.Windows.Forms.CheckBox ShowFIO;
+        private System.Windows.Forms.CheckBox ShowCode;
+        private System.Windows.Forms.CheckBox ShowHoliday;
+        private System.Windows.Forms.CheckBox ShowNight;
+        private System.Windows.Forms.CheckBox ShowNormal;
+        private System.Windows.Forms.TabPage TWeldedAssembliesSetting;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox WANorma3;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox WAGroup3;
+        private System.Windows.Forms.TextBox WAGroup2;
+        private System.Windows.Forms.TextBox WAGroup1;
+        private System.Windows.Forms.TextBox WAMark3;
+        private System.Windows.Forms.TextBox WAMark2;
+        private System.Windows.Forms.TextBox WAMark1;
+        private System.Windows.Forms.TextBox WAOrder3;
+        private System.Windows.Forms.TextBox WAOrder2;
+        private System.Windows.Forms.TextBox WAOrder1;
+        private System.Windows.Forms.TextBox WANorma2;
+        private System.Windows.Forms.TextBox WANorma1;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox WAExcelFileName;
+        private System.Windows.Forms.TextBox WAMainDirectoryPath;
+        private System.Windows.Forms.TabPage TLaborIntensityOfProductsSetting;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox LIPExcelFileName;
+        private System.Windows.Forms.TextBox LIPMainDirectoryPath;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox LIPMark2;
+        private System.Windows.Forms.TextBox LIPMark1;
+        private System.Windows.Forms.TextBox LIPOrder2;
+        private System.Windows.Forms.TextBox LIPOrder1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox LIPHoursRate1;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox LIPHoursRate2;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox LIPHoursRateWithoutWelds1;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox LIPHoursRateWithoutWelds2;
     }
 }

@@ -21,48 +21,22 @@
     <ProjectTypeGuids>{BAA0C2D2-18E2-41B9-852F-F413020CAA33};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{97AF01F5-DC43-4735-AAF4-436E43C52003}</ProjectGuid>
+    <ProjectGuid>{352502E6-45B1-476B-8CDF-FB0B702E2C2F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
-    <RootNamespace>OTIZ_Tabel</RootNamespace>
-    <AssemblyName>OTIZ_Tabel</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <DefineConstants>VSTO40</DefineConstants>
-    <IsWebBootstrapper>False</IsWebBootstrapper>
-    <TargetFrameworkProfile />
-    <BootstrapperEnabled>true</BootstrapperEnabled>
-    <PublishUrl>опубликовать\</PublishUrl>
-    <InstallUrl />
-    <TargetCulture>ru</TargetCulture>
-    <ApplicationVersion>1.1.0.14</ApplicationVersion>
-    <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
-    <UpdateEnabled>true</UpdateEnabled>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>days</UpdateIntervalUnits>
-    <ProductName>OTIZ_Tabel</ProductName>
-    <PublisherName />
-    <SupportUrl />
-    <FriendlyName>OTIZ_Tabel</FriendlyName>
-    <OfficeApplicationDescription />
+    <RootNamespace>OTIZ_WeldedAssembly</RootNamespace>
+    <AssemblyName>OTIZ_WeldedAssembly</AssemblyName>
     <LoadBehavior>3</LoadBehavior>
-  </PropertyGroup>
-  <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <DefineConstants>VSTO40</DefineConstants>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.8 %28x86 и x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
       <Visible>False</Visible>
-      <ProductName>Среда выполнения Microsoft Visual Studio 2010 Tools for Office %28x86 и x64%29</ProductName>
+      <ProductName>Microsoft Visual Studio 2010 Tools for Office Runtime %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
@@ -97,7 +71,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
     <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <!--
     This section defines properties that are set when the "Release" configuration is selected.
@@ -122,29 +95,15 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
     <DefineConstants>$(DefineConstants);TRACE</DefineConstants>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <!--
     This section specifies references for the project.
   -->
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.EnterpriseServices" />
-    <Reference Include="System.IO.Compression" />
-    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -172,10 +131,17 @@
   <ItemGroup>
     <Reference Include="Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <Private>True</Private>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>False</Private>
     </Reference>
@@ -191,52 +157,9 @@
     can be found.
   -->
   <ItemGroup>
-    <Compile Include="Classes\LaborIntensityUpdater.cs" />
-    <Compile Include="Connectors\BaseConnector.cs" />
-    <Compile Include="Connectors\ComConnector.cs" />
-    <Compile Include="Data\LaborIntensity.cs" />
-    <Compile Include="Forms\FieldSettingWidget.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FieldSettingWidget.Designer.cs">
-      <DependentUpon>FieldSettingWidget.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\WeldedAssemblyWidget.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\WeldedAssemblyWidget.Designer.cs">
-      <DependentUpon>WeldedAssemblyWidget.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Types\ConnectionStatus.cs" />
-    <Compile Include="Data\Employe.cs" />
-    <Compile Include="Extensions\ExtensionClass.cs" />
-    <Compile Include="Forms\LoggerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\LoggerForm.Designer.cs">
-      <DependentUpon>LoggerForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Connectors\WebConnector.cs" />
-    <Compile Include="Types\ConnectorType.cs" />
-    <Compile Include="Types\WidgetParams.cs" />
-    <Compile Include="Web References\WebReference\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Forms\FieldSettingWidget.resx">
-      <DependentUpon>FieldSettingWidget.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\WeldedAssemblyWidget.resx">
-      <DependentUpon>WeldedAssemblyWidget.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoggerForm.resx">
-      <DependentUpon>LoggerForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -250,12 +173,7 @@
     <EmbeddedResource Include="MainRibbon.resx">
       <DependentUpon>MainRibbon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SettingsForm.resx">
-      <DependentUpon>SettingsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="app.config" />
-    <None Include="OTIZ_Tabel_TemporaryKey.pfx" />
-    <None Include="packages.config" />
+    <None Include="OTIZ_WeldedAssembly_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -271,12 +189,6 @@
     <Compile Include="MainRibbon.Designer.cs">
       <DependentUpon>MainRibbon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SettingsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\SettingsForm.Designer.cs">
-      <DependentUpon>SettingsForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -287,119 +199,9 @@
       <DependentUpon>ThisAddIn.Designer.xml</DependentUpon>
     </Compile>
     <AppDesigner Include="Properties\" />
-    <None Include="Web References\WebReference\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\WebReference\Tabel.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cancel_16p.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\refresh_16p.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\save_16p.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\settings.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\time_list.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="V83">
-      <Guid>{98AC3B5B-5323-418F-8F07-E32F231D2393}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ok_16p.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete_16p.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\left2top_p16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\connect.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\disconnect.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exchange.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferences Include="Web References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferenceUrl Include="http://172.17.170.5/v8-konstr-zuptest/ws/Tabel.1cws%3fwsdl">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\WebReference\</RelPath>
-      <UpdateFromURL>http://172.17.170.5/v8-konstr-zuptest/ws/Tabel.1cws%3fwsdl</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>OTIZ_Tabel_WebReference_Tabel</CachedSettingsPropName>
-    </WebReferenceUrl>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-умножение-18.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\contract.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\expand.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-удалить-виджет-50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\minus20.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\plus20.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\minus201.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\plus201.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\plus202.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\minus202.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\plus16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\minus16.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-добавить-строку-50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-добавить-строку-501.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-работа-50.png" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -409,11 +211,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>
-    </ManifestKeyFile>
+    <ManifestKeyFile>OTIZ_WeldedAssembly_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>4491B942700B1930F3B2D6D1917235EBE9EB743A</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>77A9C91B02208EE4ED14E7388256E1649DD2A443</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -424,7 +225,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
         <ProjectProperties HostName="Excel" HostPackage="{29A7B9D7-A7F1-4328-8EF0-6B2D1A56B2C1}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="Excel" Language="cs" TemplatesPath="" DebugInfoExeName="#Software\Microsoft\Office\15.0\Excel\InstallRoot\Path#excel.exe" DebugInfoCommandLine="/x" AddItemTemplatesGuid="{51063C3A-E220-4D12-8922-BDA915ACD783}" />
-        <Host Name="Excel" GeneratedCodeNamespace="OTIZ_Tabel" IconIndex="0">
+        <Host Name="Excel" GeneratedCodeNamespace="OTIZ_WeldedAssembly" IconIndex="0">
           <HostItem Name="ThisAddIn" Code="ThisAddIn.cs" CanonicalName="AddIn" CanActivate="false" IconIndex="1" Blueprint="ThisAddIn.Designer.xml" GeneratedCode="ThisAddIn.Designer.cs" />
         </Host>
       </FlavorProperties>

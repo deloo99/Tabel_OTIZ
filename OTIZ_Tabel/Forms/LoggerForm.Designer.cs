@@ -48,7 +48,7 @@
             this.RTBoxLog.Name = "RTBoxLog";
             this.RTBoxLog.ReadOnly = true;
             this.RTBoxLog.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.RTBoxLog.Size = new System.Drawing.Size(559, 304);
+            this.RTBoxLog.Size = new System.Drawing.Size(638, 304);
             this.RTBoxLog.TabIndex = 0;
             this.RTBoxLog.Text = "";
             // 
@@ -61,7 +61,7 @@
             this.panel1.Controls.Add(this.BTReady);
             this.panel1.Location = new System.Drawing.Point(0, 309);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(564, 32);
+            this.panel1.Size = new System.Drawing.Size(643, 32);
             this.panel1.TabIndex = 3;
             // 
             // BTAbort
@@ -69,7 +69,7 @@
             this.BTAbort.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.BTAbort.Image = global::OTIZ_Tabel.Properties.Resources.cancel_16p;
             this.BTAbort.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTAbort.Location = new System.Drawing.Point(358, 4);
+            this.BTAbort.Location = new System.Drawing.Point(437, 4);
             this.BTAbort.Name = "BTAbort";
             this.BTAbort.Size = new System.Drawing.Size(100, 24);
             this.BTAbort.TabIndex = 3;
@@ -99,7 +99,7 @@
             this.BTReady.Enabled = false;
             this.BTReady.Image = global::OTIZ_Tabel.Properties.Resources.refresh_16p;
             this.BTReady.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTReady.Location = new System.Drawing.Point(460, 4);
+            this.BTReady.Location = new System.Drawing.Point(539, 4);
             this.BTReady.Name = "BTReady";
             this.BTReady.Size = new System.Drawing.Size(100, 24);
             this.BTReady.TabIndex = 1;
@@ -111,7 +111,7 @@
             // LoggerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(564, 341);
+            this.ClientSize = new System.Drawing.Size(643, 341);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.RTBoxLog);
             this.MaximizeBox = false;

@@ -1,5 +1,7 @@
 ﻿using Microsoft.Office.Tools.Ribbon;
+using OTIZ_Tabel.Classes;
 using OTIZ_Tabel.Connectors;
+using OTIZ_Tabel.Forms;
 using OTIZ_Tabel.Types;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -8,16 +10,17 @@ namespace OTIZ_Tabel
 {
     internal partial class MainRibbon
     {
-        internal BaseConnector Connector { get; set; }
+        private BaseConnector _connector;
+        private FieldSettingWidget _widget;
 
         private void GetWorkedTime_Click(object sender, RibbonControlEventArgs e)
         {
-            switch (Connector.ConnectionStatus)
+            switch (_connector.ConnectionStatus)
             {
                 case (ConnectionStatus.Connected):
                     using (var loggerForm = new LoggerForm())
                     {
-                        new Task(delegate () { Connector.SetWorkingHours(loggerForm); }).Start();
+                        new Task(delegate () { _connector.SetWorkingHours(loggerForm); }).Start();
                         loggerForm.ShowDialog();
                     }
                     break;
@@ -31,22 +34,23 @@ namespace OTIZ_Tabel
         }
         private void Settings_Click(object sender, RibbonControlEventArgs e)
         {
-            using var settingsForm = new SettingsForm(Connector.ConnectionStatus != ConnectionStatus.Disconnected);
+            using var settingsForm = new SettingsForm(_connector.ConnectionStatus != ConnectionStatus.Disconnected);
             settingsForm.ShowDialog();
             UpdateConnectionType();
+            _widget?.UpdateSettings();
         }
         private void ChangeConnectionState_Click(object sender, RibbonControlEventArgs e)
         {
-            switch (Connector.ConnectionStatus)
+            switch (_connector.ConnectionStatus)
             {
                 case ConnectionStatus.Disconnected:
                     new Task(() =>
                     {
                         using (var loggerForm = new LoggerForm())
                         {
-                            Connector.Connection();
-                            UpdateConnectionStatus(Connector.ConnectionStatus);
-                            if (Connector.ConnectorType != ConnectorType.WebConnector)
+                            _connector.Connection();
+                            UpdateConnectionStatus(_connector.ConnectionStatus);
+                            if (_connector.ConnectorType != ConnectorType.WebConnector)
                                 loggerForm.ShowDialog();
                         };
                     }).Start();
@@ -55,10 +59,35 @@ namespace OTIZ_Tabel
                 case ConnectionStatus.Connected:
                     if (MessageBox.Show("Отключиться от сервера 1С?", "Предупреждение",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                        Connector.Disonnection();
+                        _connector.Disonnection();
                     break;
             }
-            UpdateConnectionStatus(Connector.ConnectionStatus);
+            UpdateConnectionStatus(_connector.ConnectionStatus);
+        }
+        private void OpenWidget_Click(object sender, RibbonControlEventArgs e)
+        {
+            if (_widget == null || _widget.IsDisposed)
+                _widget = new FieldSettingWidget();
+
+            _widget.Show();
+        }
+        private void WeldedAssemblies_Click(object sender, RibbonControlEventArgs e)
+        {
+            using var loggerForm = new LoggerForm
+            {
+                Text = "Работа со сварными узлами"
+            };
+            new Task(delegate () { LaborIntensityUpdater.SetWeldedAssembliesList(loggerForm); }).Start();
+            loggerForm.ShowDialog();
+        }
+        private void LaborIntensityOfProducts_Click(object sender, RibbonControlEventArgs e)
+        {
+            using var loggerForm = new LoggerForm
+            {
+                Text = "Работа с трудоемкостю изделий"
+            };
+            new Task(delegate () { LaborIntensityUpdater.SetLaborIntensityOfProducts(loggerForm); }).Start();
+            loggerForm.ShowDialog();
         }
         private void UpdateConnectionStatus(ConnectionStatus connectionStatus)
         {
@@ -72,12 +101,13 @@ namespace OTIZ_Tabel
         }
         private void UpdateConnectionType()
         {
-            Connector = Properties.Settings.Default.ConnectionType switch
+            _connector = (ConnectorType)Properties.Settings.Default.ConnectionType switch
             {
-                0 => new WebConnector(),
-                1 => new ComConnector(),
+                ConnectorType.WebConnector => new WebConnector(),
+                ConnectorType.ComConnector => new ComConnector(),
                 _ => throw new System.NotImplementedException("Неизвестный тип подключения"),
             };
         }
+
     }
 }

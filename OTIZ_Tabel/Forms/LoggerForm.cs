@@ -12,9 +12,7 @@ namespace OTIZ_Tabel
             InvisibleShowAndHide();
         }
 
-
         public bool IsClosed { get; private set; }
-
 
         public void DefaultText(string message) => СustomText(message, Color.Black, FontStyle.Regular);
         public void DefaultBoldText(string message) => СustomText(message, Color.Black, FontStyle.Bold);
@@ -36,7 +34,6 @@ namespace OTIZ_Tabel
         {
             if (!IsClosed) this?.Invoke(new Action(() => { TaskComplete(); }));
         }
-
 
         private void TaskComplete()
         {
@@ -61,8 +58,6 @@ namespace OTIZ_Tabel
             => Close();
         private void BTAbort_Click(object sender, EventArgs e)
             => Close();
-
-
         private void BTSaveLog_Click(object sender, EventArgs e)
         {
             try

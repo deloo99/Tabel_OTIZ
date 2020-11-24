@@ -12,7 +12,7 @@ namespace OTIZ_Tabel.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -74,12 +74,12 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("3")]
-        public int FIOCol {
+        public int FioCol {
             get {
-                return ((int)(this["FIOCol"]));
+                return ((int)(this["FioCol"]));
             }
             set {
-                this["FIOCol"] = value;
+                this["FioCol"] = value;
             }
         }
         
@@ -236,10 +236,94 @@ namespace OTIZ_Tabel.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://172.17.170.5/v8-konstr-zup/ws/Tabel.1cws")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://172.17.170.5/v8-konstr-zuptest/ws/Tabel.1cws")]
         public string OTIZ_Tabel_WebReference_Tabel {
             get {
                 return ((string)(this["OTIZ_Tabel_WebReference_Tabel"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int WidgetParams {
+            get {
+                return ((int)(this["WidgetParams"]));
+            }
+            set {
+                this["WidgetParams"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string WeldedAssembliesSetting {
+            get {
+                return ((string)(this["WeldedAssembliesSetting"]));
+            }
+            set {
+                this["WeldedAssembliesSetting"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("P:\\\\КТО\\\\ОГТ\\\\Сводка трудоемкости по заказам")]
+        public string WAMainDirectoryPath {
+            get {
+                return ((string)(this["WAMainDirectoryPath"]));
+            }
+            set {
+                this["WAMainDirectoryPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Сводная таблица трудоемкости.xlsm")]
+        public string WAExcelFileName {
+            get {
+                return ((string)(this["WAExcelFileName"]));
+            }
+            set {
+                this["WAExcelFileName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("P:\\\\КТО\\\\ОГТ\\\\Сводка трудоемкости по заказам")]
+        public string LIPMainDirectoryPath {
+            get {
+                return ((string)(this["LIPMainDirectoryPath"]));
+            }
+            set {
+                this["LIPMainDirectoryPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Сводная таблица трудоемкости.xlsm")]
+        public string LIPExcelFileName {
+            get {
+                return ((string)(this["LIPExcelFileName"]));
+            }
+            set {
+                this["LIPExcelFileName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LaborIntensityOfProductsSetting {
+            get {
+                return ((string)(this["LaborIntensityOfProductsSetting"]));
+            }
+            set {
+                this["LaborIntensityOfProductsSetting"] = value;
             }
         }
     }

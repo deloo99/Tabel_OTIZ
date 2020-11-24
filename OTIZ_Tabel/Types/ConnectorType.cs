@@ -2,8 +2,8 @@
 {
     public enum ConnectorType
     {
-        BaseConnector,
-        WebConnector,
-        ComConnector,
+        BaseConnector = -1,
+        WebConnector = 0,
+        ComConnector = 1,
     }
 }

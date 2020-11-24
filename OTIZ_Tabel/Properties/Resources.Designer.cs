@@ -113,6 +113,56 @@ namespace OTIZ_Tabel.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_добавить_строку_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-добавить-строку-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_добавить_строку_501 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-добавить-строку-501", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_работа_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-работа-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_удалить_виджет_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-удалить-виджет-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_умножение_18 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-умножение-18", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap left2top_p16 {
             get {
                 object obj = ResourceManager.GetObject("left2top_p16", resourceCulture);
@@ -123,9 +173,29 @@ namespace OTIZ_Tabel.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minus16 {
+            get {
+                object obj = ResourceManager.GetObject("minus16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ok_16p {
             get {
                 object obj = ResourceManager.GetObject("ok_16p", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus16 {
+            get {
+                object obj = ResourceManager.GetObject("plus16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

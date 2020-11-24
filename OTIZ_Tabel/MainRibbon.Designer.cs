@@ -37,8 +37,11 @@
         {
             this.tab1 = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
-            this.ChangeConnectionState = this.Factory.CreateRibbonButton();
+            this.LaborIntensityOfProducts = this.Factory.CreateRibbonButton();
+            this.StartWeldedAssemblies = this.Factory.CreateRibbonButton();
             this.GetWorkedTime = this.Factory.CreateRibbonButton();
+            this.ChangeConnectionState = this.Factory.CreateRibbonButton();
+            this.OpenWidget = this.Factory.CreateRibbonButton();
             this.Settings = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
@@ -53,20 +56,32 @@
             // 
             // group1
             // 
-            this.group1.Items.Add(this.ChangeConnectionState);
+            this.group1.Items.Add(this.LaborIntensityOfProducts);
+            this.group1.Items.Add(this.StartWeldedAssemblies);
             this.group1.Items.Add(this.GetWorkedTime);
+            this.group1.Items.Add(this.ChangeConnectionState);
+            this.group1.Items.Add(this.OpenWidget);
             this.group1.Items.Add(this.Settings);
             this.group1.Label = "ОТИЗ АО \"Стальмост\"";
             this.group1.Name = "group1";
             // 
-            // ChangeConnectionState
+            // LaborIntensityOfProducts
             // 
-            this.ChangeConnectionState.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.ChangeConnectionState.Image = global::OTIZ_Tabel.Properties.Resources.disconnect;
-            this.ChangeConnectionState.Label = "Соединение с базой 1С";
-            this.ChangeConnectionState.Name = "ChangeConnectionState";
-            this.ChangeConnectionState.ShowImage = true;
-            this.ChangeConnectionState.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ChangeConnectionState_Click);
+            this.LaborIntensityOfProducts.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.LaborIntensityOfProducts.Image = global::OTIZ_Tabel.Properties.Resources.icons8_работа_50;
+            this.LaborIntensityOfProducts.Label = "Трудоемкость изделий";
+            this.LaborIntensityOfProducts.Name = "LaborIntensityOfProducts";
+            this.LaborIntensityOfProducts.ShowImage = true;
+            this.LaborIntensityOfProducts.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.LaborIntensityOfProducts_Click);
+            // 
+            // StartWeldedAssemblies
+            // 
+            this.StartWeldedAssemblies.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.StartWeldedAssemblies.Image = global::OTIZ_Tabel.Properties.Resources.icons8_добавить_строку_501;
+            this.StartWeldedAssemblies.Label = "Сварные узлы";
+            this.StartWeldedAssemblies.Name = "StartWeldedAssemblies";
+            this.StartWeldedAssemblies.ShowImage = true;
+            this.StartWeldedAssemblies.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.WeldedAssemblies_Click);
             // 
             // GetWorkedTime
             // 
@@ -77,11 +92,26 @@
             this.GetWorkedTime.ShowImage = true;
             this.GetWorkedTime.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.GetWorkedTime_Click);
             // 
+            // ChangeConnectionState
+            // 
+            this.ChangeConnectionState.Image = global::OTIZ_Tabel.Properties.Resources.disconnect;
+            this.ChangeConnectionState.Label = "Соединение с базой 1С";
+            this.ChangeConnectionState.Name = "ChangeConnectionState";
+            this.ChangeConnectionState.ShowImage = true;
+            this.ChangeConnectionState.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ChangeConnectionState_Click);
+            // 
+            // OpenWidget
+            // 
+            this.OpenWidget.Image = global::OTIZ_Tabel.Properties.Resources.icons8_удалить_виджет_50;
+            this.OpenWidget.Label = "Виджет для настроек";
+            this.OpenWidget.Name = "OpenWidget";
+            this.OpenWidget.ShowImage = true;
+            this.OpenWidget.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.OpenWidget_Click);
+            // 
             // Settings
             // 
-            this.Settings.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.Settings.Image = global::OTIZ_Tabel.Properties.Resources.settings;
-            this.Settings.Label = "Настроить приложение";
+            this.Settings.Label = "Расширенные настройки";
             this.Settings.Name = "Settings";
             this.Settings.ShowImage = true;
             this.Settings.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Settings_Click);
@@ -106,6 +136,9 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton GetWorkedTime;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton Settings;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ChangeConnectionState;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton OpenWidget;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton StartWeldedAssemblies;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton LaborIntensityOfProducts;
     }
 
     partial class ThisRibbonCollection

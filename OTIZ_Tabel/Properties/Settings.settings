@@ -14,7 +14,7 @@
     <Setting Name="LastRow" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">100</Value>
     </Setting>
-    <Setting Name="FIOCol" Type="System.Int32" Scope="User">
+    <Setting Name="FioCol" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">3</Value>
     </Setting>
     <Setting Name="HolidayCol" Type="System.Int32" Scope="User">
@@ -61,7 +61,28 @@
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="OTIZ_Tabel_WebReference_Tabel" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://172.17.170.5/v8-konstr-zup/ws/Tabel.1cws</Value>
+      <Value Profile="(Default)">http://172.17.170.5/v8-konstr-zuptest/ws/Tabel.1cws</Value>
+    </Setting>
+    <Setting Name="WidgetParams" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="WeldedAssembliesSetting" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="WAMainDirectoryPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">P:\\КТО\\ОГТ\\Сводка трудоемкости по заказам</Value>
+    </Setting>
+    <Setting Name="WAExcelFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Сводная таблица трудоемкости.xlsm</Value>
+    </Setting>
+    <Setting Name="LIPMainDirectoryPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">P:\\КТО\\ОГТ\\Сводка трудоемкости по заказам</Value>
+    </Setting>
+    <Setting Name="LIPExcelFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Сводная таблица трудоемкости.xlsm</Value>
+    </Setting>
+    <Setting Name="LaborIntensityOfProductsSetting" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>
